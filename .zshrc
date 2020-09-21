@@ -36,7 +36,11 @@ function gbs() {
 ## -------------------------
 ## Homebrew系
 ## -------------------------
+## <<追加予定>> - brew info の関数を作る
 
+alias bl=‘brew list’
+alias bdoc=‘brew doctor’
+alias bconf=‘brew --config’
 
 
 ## -------------------------
