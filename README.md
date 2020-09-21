@@ -13,7 +13,9 @@
 
 ## Installation
 
-<p>⚠︎Right now, I working on improving it so that it can be installed more easily.</p>
+<p>🔥Right now, I working on improving it so that it can be installed more easily.🔥</p>
+<p><strong>⚠︎[5.]When executing 5</strong>, if a file or folder with the same name exists at the link destination, the shell may not work properly.</p>
+<p><strong>If it exists</strong>, back it up to another location and save it, or delete it.</p>
 
 ```
 1. cd ~
