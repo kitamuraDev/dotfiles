@@ -4,8 +4,6 @@
 <p align="center">Dotfiles by me for me.</p>
 <img src="img/dotfiles.png" alt="My dotfile">
 
-## <br />
-
 ## Environment
 
 - OS : macOS Catalina 10.15.6
