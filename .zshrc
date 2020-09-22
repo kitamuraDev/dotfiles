@@ -57,12 +57,15 @@ alias msrootin='mysql -u root -p'
 ## -------------------------
 ## その他 
 ## -------------------------
-## << 追加予定 >> - vzとszを組み合わせを作りたい
+## << 追加予定 >> - vzとszを組み合わせた関数を作る
  
 alias vi='vim'
 alias q='exit'
+## <open files and read source alias>
 alias vv='vim ~/.vimrc'
 alias sv='source ~/.vimrc'
+alias vgv='vim ~/.gvimrc'
+alias sgv='source ~/.gvimrc'
 alias vz='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
 ## lsよりコマンド打ちやすいllで、色付き隠しファイル込属性区別付きls
