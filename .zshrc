@@ -61,6 +61,8 @@ alias msrootin='mysql -u root -p'
  
 alias vi='vim'
 alias q='exit'
+alias vv='vim ~/.vimrc'
+alias sv='source ~/.vimrc'
 alias vz='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
 ## lsよりコマンド打ちやすいllで、色付き隠しファイル込属性区別付きls
