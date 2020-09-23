@@ -38,9 +38,9 @@ function gbs() {
 ## -------------------------
 ## <<追加予定>> - brew info の関数を作る
 
-alias bl=‘brew list’
-alias bdoc=‘brew doctor’
-alias bconf=‘brew --config’
+alias bl='brew list' 
+alias bdoc='brew doctor'
+alias bconf='brew --config'
 
 
 ## -------------------------
@@ -61,13 +61,14 @@ alias msrootin='mysql -u root -p'
  
 alias vi='vim'
 alias q='exit'
+alias tr='tree'
 ## <open files and read source alias>
+alias vz='vim ~/.zshrc'
+alias sz='source ~/.zshrc'
 alias vv='vim ~/.vimrc'
 alias sv='source ~/.vimrc'
 alias vgv='vim ~/.gvimrc'
 alias sgv='source ~/.gvimrc'
-alias vz='vim ~/.zshrc'
-alias sz='source ~/.zshrc'
 ## lsよりコマンド打ちやすいllで、色付き隠しファイル込属性区別付きls
 alias ll='ls -alFG'
 ## <カレントディレクトリのパスをコピー>
