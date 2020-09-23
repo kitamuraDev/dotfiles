@@ -63,8 +63,8 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " -------------------------
 " key-maping 
 " -------------------------
-" control + eでNERDTreeを起動
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" control + tでNERDTreeを起動
+nnoremap <silent><C-t> :NERDTreeToggle<CR>
 
 " -------------------------
 " プラグインセットアップ 
