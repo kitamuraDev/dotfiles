@@ -65,6 +65,8 @@ alias tr='tree'
 ## <open files and read source alias>
 alias vz='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
+alias vtm='vim ~/.tmux.conf'
+alias stm='source ~/.tmux.conf'
 alias vv='vim ~/.vimrc'
 alias sv='source ~/.vimrc'
 alias vgv='vim ~/.gvimrc'
