@@ -61,7 +61,6 @@ alias msrootin='mysql -u root -p'
  
 alias vi='vim'
 alias q='exit'
-alias tr='tree'
 ## <open files and read source alias>
 alias vz='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
@@ -71,7 +70,10 @@ alias vv='vim ~/.vimrc'
 alias sv='source ~/.vimrc'
 alias vgv='vim ~/.gvimrc'
 alias sgv='source ~/.gvimrc'
-## lsよりコマンド打ちやすいllで、色付き隠しファイル込属性区別付きls
+## <tree系> 
+alias tr='tree'
+alias trdp='tree -Dp'
+## <lsよりコマンド打ちやすいllで、色付き隠しファイル込属性区別付きl>s
 alias ll='ls -alFG'
 ## <カレントディレクトリのパスをコピー>
 alias pwdc='pwd | tr -d "\n" | pbcopy'
