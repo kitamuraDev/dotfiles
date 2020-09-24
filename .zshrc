@@ -1,11 +1,23 @@
-## -------------------------
-## Git系
-## -------------------------
-## << 追加予定 >> - interactiveモード的な感じにしたい。要は対話形式(例：gcmと打てば、「コミットメッセージを入力してください」のようなメッセージが返ってくるような感じ)
+# -------------------------
+# 基本設定
+# -------------------------
+# <zshの補完を有効化>
+autoload -Uz compinit && compinit
+# <補完候補を一覧表示する>
+setopt auto_list
+# <tabで順に補完候補を切り替える>
+setopt auto_menu
+
+
+
+# -------------------------
+# Git系
+# -------------------------
+# << 追加予定 >> - interactiveモード的な感じにしたい。要は対話形式(例：gcmと打てば、「コミットメッセージを入力してください」のようなメッセージが返ってくるような感じ)
 
 alias g='git'
 alias gitls='alias | grep git'
-## <操作履歴を10個まで表示する>
+# <操作履歴を10個まで表示する>
 alias ghis='git reflog --date=local -n 10'
 alias gtree='git log --graph'
 alias gol='git log --oneline'
@@ -27,25 +39,25 @@ function gbs() {
 }
 
 
-## -------------------------
-## npm系
-## -------------------------
+# -------------------------
+# npm系
+# -------------------------
 
 
 
-## -------------------------
-## Homebrew系
-## -------------------------
-## <<追加予定>> - brew info の関数を作る
+# -------------------------
+# Homebrew系
+# -------------------------
+# <<追加予定>> - brew info の関数を作る
 
 alias bl='brew list' 
 alias bdoc='brew doctor'
 alias bconf='brew --config'
 
 
-## -------------------------
-## mysql系
-## -------------------------
+# -------------------------
+# mysql系
+# -------------------------
 alias msls='alias | grep mysql'
 alias msv='mysql --version'
 alias msstart='mysql.server start'
@@ -54,14 +66,14 @@ alias msstop='mysql.server stop'
 alias msping='mysqladmin ping -u root -p'
 alias msrootin='mysql -u root -p'
 
-## -------------------------
-## その他 
-## -------------------------
-## << 追加予定 >> - vzとszを組み合わせた関数を作る
+# -------------------------
+# その他
+# -------------------------
+# << 追加予定 >> - vzとszを組み合わせた関数を作る
  
 alias vi='vim'
 alias q='exit'
-## <open files and read source alias>
+# <open files and read source alias>
 alias vz='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias vtm='vim ~/.tmux.conf'
@@ -70,32 +82,32 @@ alias vv='vim ~/.vimrc'
 alias sv='source ~/.vimrc'
 alias vgv='vim ~/.gvimrc'
 alias sgv='source ~/.gvimrc'
-## <tree系> 
+# <tree系>
 alias tr='tree'
 alias trdp='tree -Dp'
-## <lsよりコマンド打ちやすいllで、色付き隠しファイル込属性区別付きl>s
+# <lsよりコマンド打ちやすいllで、色付き隠しファイル込属性区別付きl>s
 alias ll='ls -alFG'
-## <カレントディレクトリのパスをコピー>
+# <カレントディレクトリのパスをコピー>
 alias pwdc='pwd | tr -d "\n" | pbcopy'
-## <.DS_Storeを削除>
+# <.DS_Storeを削除>
 alias dsdel='find . -name '.DS_Store' -type f -ls -delete'
 
-## -------------------------
-## cd系
-## -------------------------
+# -------------------------
+# cd系
+# -------------------------
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../../'
 
 
-## -------------------------
-## fzf系 
-## -------------------------
-## <セットアップ>
+# -------------------------
+# fzf系
+# -------------------------
+# <セットアップ>
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-## <ローカルに存在するbranchを選択して切り替える>
+# <ローカルに存在するbranchを選択して切り替える>
 fbr() {
   local branches branch
   branches=$(git branch -vv) &&
@@ -103,7 +115,7 @@ fbr() {
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
-## <git --graphをfzfに突っ込んだ便利なコマンド。中身が複雑なため、理解できていないが有り難く使わして頂く>
+# <git --graphをfzfに突っ込んだ便利なコマンド。中身が複雑なため、理解できていないが有り難く使わして頂く>
 fshow() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
@@ -115,7 +127,7 @@ fshow() {
 FZF-EOF"
 }
 
-## <findコマンドで下層までをリスト化。標準出力をパイプでfzfに渡し、最後にcdコマンドに結果を渡す>
+# <findコマンドで下層までをリスト化。標準出力をパイプでfzfに渡し、最後にcdコマンドに結果を渡す>
 fcd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \
@@ -123,8 +135,8 @@ fcd() {
   cd "$dir"
 }
 
-## <インタラクティブなgit add diff>
-## <usage: control + d で diff | Enter で add>
+# <インタラクティブなgit add diff>
+# <usage: control + d で diff | Enter で add>
 fadd() {
   local out q n addfiles
   while out=$(
@@ -145,9 +157,9 @@ fadd() {
 
 
 
-## -------------------------
-## 
-## -------------------------
+# -------------------------
+#
+# -------------------------
 
 
 
