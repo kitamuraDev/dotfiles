@@ -7,8 +7,8 @@ autoload -Uz compinit && compinit
 setopt auto_list
 # <tabで順に補完候補を切り替える>
 setopt auto_menu
-
-
+# <パス直打ちでディレクトリ移動>
+setopt auto_cd
 
 # -------------------------
 # Git系
@@ -22,6 +22,7 @@ alias ghis='git reflog --date=local -n 10'
 alias gtree='git log --graph'
 alias gol='git log --oneline'
 alias gs='git status'
+alias gd='git diff'
 alias gb='git branch'
 alias ga='git add'
 alias gc='git commit'
@@ -71,6 +72,7 @@ alias msrootin='mysql -u root -p'
 # -------------------------
 # << 追加予定 >> - vzとszを組み合わせた関数を作る
  
+alias v='vim'
 alias vi='vim'
 alias q='exit'
 # <open files and read source alias>
