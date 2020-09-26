@@ -61,7 +61,7 @@ set incsearch
 set hlsearch
 
 " -------------------------
-" key-maping 
+" key-mapping
 " -------------------------
 " control + tでNERDTreeを起動
 nnoremap <silent><C-t> :NERDTreeToggle<CR>
