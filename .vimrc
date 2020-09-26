@@ -19,6 +19,8 @@ set showcmd
 " -------------------------
 " コメントの色を水色
 hi Comment ctermfg=3
+" windowのタイトルを変更
+set title
 " 行番号
 set number
 " 現在の行を強調表示
@@ -57,14 +59,41 @@ set wrapscan
 set incsearch
 " 検索結果をハイライト表示
 set hlsearch
-" ESC連打でハイライト解除
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " -------------------------
 " key-maping 
 " -------------------------
 " control + tでNERDTreeを起動
 nnoremap <silent><C-t> :NERDTreeToggle<CR>
+" ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+" カーソル下の単語を<space*2>ハイライトする
+nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
+" シンプルな行頭・行末・文字検索
+noremap <Space>h  ^
+noremap <Space>l  $
+nnoremap <Space>/  *
+" 行頭、行末に移動して挿入モードに切り替え
+inoremap <C-e> <Esc>$a
+inoremap <C-a> <Esc>^a
+noremap <C-e> <Esc>$a
+noremap <C-a> <Esc>^a
+" ctrl + dで削除
+inoremap <C-d> <Del>
+noremap <C-d> <Del>
+
+" emacsライクなカーソル移動(インサートモード時)
+" Exコマンドを実装する関数を定義
+function! ExecExCommand(cmd)
+  silent exec a:cmd
+  return ''
+endfunction
+" 上下移動
+inoremap <silent> <expr> <C-p> "<C-r>=ExecExCommand('normal k')<CR>"
+inoremap <silent> <expr> <C-n> "<C-r>=ExecExCommand('normal j')<CR>"
+" 単語移動
+inoremap <silent> <expr> <C-b> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
+inoremap <silent> <expr> <C-f> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
 
 " -------------------------
 " プラグインセットアップ 
