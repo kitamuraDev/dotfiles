@@ -25,7 +25,8 @@
 5. sh link.sh
 
 ※VScode
-6. sh vscode_link.sh
+6. chmod +x vscode_link.sh
+7. sh vscode_link.sh
 ```
 
 <br />
