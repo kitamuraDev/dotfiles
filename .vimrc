@@ -83,7 +83,7 @@ inoremap <C-d> <Del>
 noremap <C-d> <Del>
 
 " カーソル行の一つ下の行に空行を挿入
-nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
+nnoremap <C-j> :<C-u>call append(expand('.'), '')<Cr>j
 
 " emacsライクなカーソル移動(インサートモード時)
 " Exコマンドを実装する関数を定義
