@@ -23,6 +23,9 @@
 3. cd dotfiles
 4. chmod +x link.sh
 5. sh link.sh
+
+※VScode
+6. sh vscode_link.sh
 ```
 
 <br />
