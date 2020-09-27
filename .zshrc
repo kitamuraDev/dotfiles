@@ -1,13 +1,16 @@
 # -------------------------
 # 基本設定
 # -------------------------
-# <zshの補完を有効化>
+# zshの補完を有効化
 autoload -Uz compinit && compinit
-# <補完候補を一覧表示する>
+
+# 補完候補を一覧表示する
 setopt auto_list
-# <tabで順に補完候補を切り替える>
+
+# tabで順に補完候補を切り替える
 setopt auto_menu
-# <パス直打ちでディレクトリ移動>
+
+# パス直打ちでディレクトリ移動
 setopt auto_cd
 
 # -------------------------
@@ -17,8 +20,10 @@ setopt auto_cd
 
 alias g='git'
 alias gitls='alias | grep git'
-# <操作履歴を10個まで表示する>
+
+# 操作履歴を10個まで表示する
 alias ghis='git reflog --date=local -n 10'
+
 alias gtree='git log --graph'
 alias gol='git log --oneline'
 alias gs='git status'
@@ -75,7 +80,8 @@ alias msrootin='mysql -u root -p'
 alias v='vim'
 alias vi='vim'
 alias q='exit'
-# <open files and read source alias>
+
+# open files and read source alias
 alias vz='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
 alias vtm='vim ~/.tmux.conf'
@@ -84,14 +90,20 @@ alias vv='vim ~/.vimrc'
 alias sv='source ~/.vimrc'
 alias vgv='vim ~/.gvimrc'
 alias sgv='source ~/.gvimrc'
-# <tree系>
+
+# tmux系
+alias tm='tmux'
+
+# tree系
 alias tr='tree'
 alias trdp='tree -Dp'
-# <lsよりコマンド打ちやすいllで、色付き隠しファイル込属性区別付きl>s
+# 色付き隠しファイル込属性区別付きls
 alias ll='ls -alFG'
-# <カレントディレクトリのパスをコピー>
+
+# カレントディレクトリのパスをコピー
 alias pwdc='pwd | tr -d "\n" | pbcopy'
-# <.DS_Storeを削除>
+
+# .DS_Storeを削除
 alias dsdel='find . -name '.DS_Store' -type f -ls -delete'
 
 # -------------------------
@@ -105,10 +117,10 @@ alias .....='cd ../../../../'
 # -------------------------
 # fzf系
 # -------------------------
-# <セットアップ>
+# セットアップ
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# <ローカルに存在するbranchを選択して切り替える>
+# ローカルに存在するbranchを選択して切り替える
 fbr() {
   local branches branch
   branches=$(git branch -vv) &&
@@ -116,7 +128,7 @@ fbr() {
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
-# <git --graphをfzfに突っ込んだ便利なコマンド。中身が複雑なため、理解できていないが有り難く使わして頂く>
+# git --graphをfzfに突っ込んだ便利なコマンド。中身が複雑なため、理解できていないが有り難く使わして頂く
 fshow() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
@@ -128,7 +140,7 @@ fshow() {
 FZF-EOF"
 }
 
-# <findコマンドで下層までをリスト化。標準出力をパイプでfzfに渡し、最後にcdコマンドに結果を渡す>
+# findコマンドで下層までをリスト化。標準出力をパイプでfzfに渡し、最後にcdコマンドに結果を渡す
 fcd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \
@@ -136,8 +148,8 @@ fcd() {
   cd "$dir"
 }
 
-# <インタラクティブなgit add diff>
-# <usage: control + d で diff | Enter で add>
+# インタラクティブなgit add diff
+# usage: control + d で diff | Enter で add
 fadd() {
   local out q n addfiles
   while out=$(
