@@ -82,6 +82,8 @@ noremap <C-a> <Esc>^a
 inoremap <C-d> <Del>
 noremap <C-d> <Del>
 
+" カーソル行の一つ上の行に空行を挿入
+nnoremap <C-k> O<Esc>
 " カーソル行の一つ下の行に空行を挿入
 nnoremap <C-j> :<C-u>call append(expand('.'), '')<Cr>j
 
