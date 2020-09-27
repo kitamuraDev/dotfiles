@@ -69,6 +69,7 @@ nnoremap <silent><C-t> :NERDTreeToggle<CR>
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " カーソル下の単語を<space*2>ハイライトする
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
+
 " シンプルな行頭・行末・文字検索
 noremap <Space>h  ^
 noremap <Space>l  $
