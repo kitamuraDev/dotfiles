@@ -1,0 +1,39 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "editor.formatOnSave": true,
+
+  // emmetの言語設定を日本語に
+  "emmet.variables": { "lang": "ja" },
+
+  // 構文ハイライトの設定
+  "editor.tokenColorCustomizations": {
+    "comments": {
+      "foreground": "#b0c4de",
+      "fontStyle": "italic"
+    }
+  },
+  // prettier
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // LiveServer
+  "liveServer.settings.donotVerifyTags": true,
+  // gitlens
+  "gitlens.views.repositories.files.layout": "list",
+  "workbench.colorTheme": "GitHub Dark",
+  "intelephense.diagnostics.undefinedClassConstants": false,
+  "intelephense.diagnostics.undefinedConstants": false,
+  "intelephense.diagnostics.undefinedFunctions": false,
+  "intelephense.diagnostics.undefinedMethods": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+  "intelephense.diagnostics.undefinedTypes": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "java.semanticHighlighting.enabled": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  }
+}
