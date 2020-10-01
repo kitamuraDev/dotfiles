@@ -74,6 +74,9 @@ nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearc
 noremap <Space>h  ^
 noremap <Space>l  $
 nnoremap <Space>/  *
+" 画面半分先へ(<C-d>は削除として上書きしている為、以下キーに割り当て)
+noremap <Space>d <C-d>
+
 " 行頭、行末に移動して挿入モードに切り替え
 inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^a
@@ -82,6 +85,15 @@ noremap <C-a> <Esc>^a
 " ctrl + dで削除
 inoremap <C-d> <Del>
 noremap <C-d> <Del>
+
+" 対応する括弧に移動
+nnoremap [ %
+nnoremap ] %
+
+" カーソル位置の単語をyankする
+nnoremap vv vawy
+" カーソル位置の単語をカットする
+nnoremap cc vawc
 
 " カーソル行の一つ上の行に空行を挿入
 nnoremap <C-k> O<Esc>
