@@ -70,6 +70,30 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " カーソル下の単語を<space*2>ハイライトする
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
+" emacs key-bindings
+noremap <C-p> <Up>
+noremap <C-n> <Down>
+noremap <C-b> <Left>
+noremap <C-f> <Right>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+
+" Exコマンドを実装する関数を定義
+function! ExecExCommand(cmd)
+  silent exec a:cmd
+  return ''
+endfunction
+" 単語移動
+inoremap <silent> <expr> <C-b>b pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
+inoremap <silent> <expr> <C-f>f pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
+
+" カーソル行の一つ上の行に空行を挿入
+nnoremap <C-k> O<Esc>
+" カーソル行の一つ下の行に空行を挿入
+nnoremap <C-j> :<C-u>call append(expand('.'), '')<Cr>j
+
 " シンプルな行頭・行末・文字検索
 noremap <Space>h  ^
 noremap <Space>l  $
@@ -94,24 +118,6 @@ nnoremap ] %
 nnoremap vv vawy
 " カーソル位置の単語をカットする
 nnoremap cc vawc
-
-" カーソル行の一つ上の行に空行を挿入
-nnoremap <C-k> O<Esc>
-" カーソル行の一つ下の行に空行を挿入
-nnoremap <C-j> :<C-u>call append(expand('.'), '')<Cr>j
-
-" emacsライクなカーソル移動(インサートモード時)
-" Exコマンドを実装する関数を定義
-function! ExecExCommand(cmd)
-  silent exec a:cmd
-  return ''
-endfunction
-" 上下移動
-inoremap <silent> <expr> <C-p> "<C-r>=ExecExCommand('normal k')<CR>"
-inoremap <silent> <expr> <C-n> "<C-r>=ExecExCommand('normal j')<CR>"
-" 単語移動
-inoremap <silent> <expr> <C-b> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
-inoremap <silent> <expr> <C-f> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
 
 " HTMLとXMLの閉じタグ補完
 augroup MyXML
