@@ -42,7 +42,6 @@ inoremap <C-a> <Esc>^a
 noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^a
 " ctrl + dで削除
-inoremap <C-d> <Del>
 noremap <C-d> <Del>
 
 " カーソル行の一つ上の行に空行を挿入
