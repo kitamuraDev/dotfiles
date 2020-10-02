@@ -89,6 +89,15 @@ endfunction
 inoremap <silent> <expr> <C-b>b pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
 inoremap <silent> <expr> <C-f>f pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
 
+" 行頭、行末に移動して挿入モードに切り替え
+inoremap <C-e> <Esc>$a
+inoremap <C-a> <Esc>^a
+noremap <C-e> <Esc>$a
+noremap <C-a> <Esc>^a
+" ctrl + dで削除
+inoremap <C-d> <Del>
+noremap <C-d> <Del>
+
 " カーソル行の一つ上の行に空行を挿入
 nnoremap <C-k> O<Esc>
 " カーソル行の一つ下の行に空行を挿入
@@ -100,15 +109,6 @@ noremap <Space>l  $
 nnoremap <Space>/  *
 " 画面半分先へ(<C-d>は削除として上書きしている為、以下キーに割り当て)
 noremap <Space>d <C-d>
-
-" 行頭、行末に移動して挿入モードに切り替え
-inoremap <C-e> <Esc>$a
-inoremap <C-a> <Esc>^a
-noremap <C-e> <Esc>$a
-noremap <C-a> <Esc>^a
-" ctrl + dで削除
-inoremap <C-d> <Del>
-noremap <C-d> <Del>
 
 " 対応する括弧に移動
 nnoremap [ %
