@@ -35,11 +35,11 @@ alias grs='git reset --soft HEAD^'
 
 # add ~ push
 function gacp() {
-    git branch && git status;
-    echo "Which file to add?" && read addFile;
-    git add ${addFile}
-    echo "Type commit comment" && read comment;
-    git commit -m ${comment} && git push origin HEAD
+  git branch && git status;
+  echo "Which file to add?" && read addFile;
+  git add ${addFile}
+  echo "Type commit comment" && read comment;
+  git commit -m ${comment} && git push origin HEAD
 }
 
 # clone
@@ -82,8 +82,7 @@ alias q='exit'
 
 # open files and read source alias
 function vsz() {
-  vim ~/.zshrc
-  source ~/.zshrc
+  vim ~/.zshrc && source ~/.zshrc;
 }
 alias vtm='vim ~/.tmux.conf'
 alias vv='vim ~/.vimrc'
