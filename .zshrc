@@ -36,7 +36,7 @@ alias grs='git reset --soft HEAD^'
 # add ~ push
 function gacp() {
   git branch && git status;
-  echo "Which file to add?" && read addFile;
+  echo "Which file to add ??" && read addFile;
   git add ${addFile}
   echo "Type commit comment" && read comment;
   git commit -m ${comment} && git push origin HEAD
