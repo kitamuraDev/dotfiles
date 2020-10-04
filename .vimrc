@@ -85,9 +85,9 @@ function! ExecExCommand(cmd)
   silent exec a:cmd
   return ''
 endfunction
-" 単語移動
-inoremap <silent> <expr> <C-b>b pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
-inoremap <silent> <expr> <C-f>f pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
+" 単語移動(emacs key-bindingsと競合しているため、一旦コメントアウト。)
+" inoremap <silent> <expr> <C-b>b pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
+" inoremap <silent> <expr> <C-f>f pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
 
 " 行頭、行末に移動して挿入モードに切り替え
 inoremap <C-e> <Esc>$a
