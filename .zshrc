@@ -37,7 +37,6 @@ alias gpl='git pull origin'
 alias gcl='git clone'
 alias gco='git checkout'
 alias gco.='git checkout .'
-alias gcom='git checkout master'
 
 function gbs() {
     git branch;
@@ -128,7 +127,7 @@ fbr() {
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
-# git --graphをfzfに突っ込んだ便利なコマンド。中身が複雑なため、理解できていないが有り難く使わして頂く
+# git --graphをfzfに食わせた便利なコマンド。中身が複雑なため、理解できていないが有り難く使わして頂く
 fshow() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
