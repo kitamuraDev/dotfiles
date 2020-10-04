@@ -24,25 +24,31 @@ alias gitls='alias | grep git'
 # 操作履歴を10個まで表示する
 alias ghis='git reflog --date=local -n 10'
 
+# state check
 alias gtree='git log --graph'
 alias gol='git log --oneline'
+alias gb='git branch'
 alias gs='git status'
 alias gd='git diff'
-alias gb='git branch'
-alias ga='git add'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias gps='git push origin'
-alias gpl='git pull origin'
-alias gcl='git clone'
-alias gco='git checkout'
-alias gco.='git checkout .'
 
-function gbs() {
-    git branch;
-    git status;
+# add, commitの取り消し
+alias gco.='git checkout .'
+alias grs='git reset --soft HEAD^'
+
+# add ~ push
+function gacp() {
+    git branch && git status;
+    echo "Which file to add?" && read addFile;
+    git add ${addFile}
+    echo "Type commit comment" && read comment;
+    git commit -m ${comment} && git push origin HEAD
 }
 
+# clone
+function clone() {
+  echo "Type enter the URL" && read url;
+  git clone ${url}
+}
 
 # -------------------------
 # npm系
