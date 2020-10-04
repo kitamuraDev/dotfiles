@@ -16,8 +16,6 @@ setopt auto_cd
 # -------------------------
 # Git系
 # -------------------------
-# << 追加予定 >> - interactiveモード的な感じにしたい。要は対話形式(例：gcmと打てば、「コミットメッセージを入力してください」のようなメッセージが返ってくるような感じ)
-
 alias g='git'
 alias gitls='alias | grep git'
 
@@ -59,8 +57,6 @@ function clone() {
 # -------------------------
 # Homebrew系
 # -------------------------
-# <<追加予定>> - brew info の関数を作る
-
 alias bl='brew list' 
 alias bdoc='brew doctor'
 alias bconf='brew --config'
@@ -80,21 +76,18 @@ alias msrootin='mysql -u root -p'
 # -------------------------
 # その他
 # -------------------------
-# << 追加予定 >> - open files aliasの組み合わせを作る。
- 
 alias v='vim'
 alias vi='vim'
 alias q='exit'
 
 # open files and read source alias
-alias vz='vim ~/.zshrc'
-alias sz='source ~/.zshrc'
+function vsz() {
+  vim ~/.zshrc
+  source ~/.zshrc
+}
 alias vtm='vim ~/.tmux.conf'
-alias stm='source ~/.tmux.conf'
 alias vv='vim ~/.vimrc'
-alias sv='source ~/.vimrc'
 alias vgv='vim ~/.gvimrc'
-alias sgv='source ~/.gvimrc'
 
 # tmux系
 alias tm='tmux'
@@ -178,7 +171,4 @@ fadd() {
 # -------------------------
 #
 # -------------------------
-
-
-
 
