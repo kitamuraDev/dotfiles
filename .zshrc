@@ -27,6 +27,7 @@ alias gtree='git log --graph'
 alias gol='git log --oneline'
 alias gb='git branch'
 alias gs='git status'
+alias gss='git status -s'
 alias gd='git diff'
 
 # add, commitの取り消し
