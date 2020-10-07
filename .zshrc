@@ -30,8 +30,15 @@ alias gs='git status'
 alias gss='git status -s'
 alias gd='git diff'
 
-# add, commitの取り消し
+# <add, commitの取り消し>
+# usage : addをする前。変更した内容すべてを戻す
 alias gco.='git checkout .'
+# usage : addをした後。ステージングから降りる
+function restorefile() {
+  echo "Please enter the file name to be removed from the stage" && read restoreFile;
+  git restore --staged ${restoreFile}
+}
+# usage : commitを取り消す。ファイルの内容は残る
 alias grs='git reset --soft HEAD^'
 
 # add ~ push
