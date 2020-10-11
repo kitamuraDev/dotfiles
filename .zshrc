@@ -22,13 +22,14 @@ alias gitls='alias | grep git'
 # 操作履歴を10個まで表示する
 alias ghis='git reflog --date=local -n 10'
 
-# state check
+# Basic commands
 alias gtree='git log --graph'
 alias gol='git log --oneline'
 alias gb='git branch'
 alias gs='git status'
 alias gss='git status -s'
 alias gd='git diff'
+alias gpush='git push origin HEAD'
 
 # <add, commitの取り消し>
 # usage : addをする前。変更した内容すべてを戻す
@@ -48,6 +49,14 @@ function gacp() {
   git add ${addFile}
   echo "Please enter the commit comment" && read comment;
   git commit -m ${comment} && git push origin HEAD
+}
+# add ~ commit
+function gac() {
+  git branch && git status;
+  echo "Which file to add ??" && read addFile;
+  git add ${addFile}
+  echo "Please enter the commit comment" && read comment;
+  git commit -m ${comment}
 }
 
 # 新規ブランチを作成してチェックアウト
