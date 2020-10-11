@@ -57,7 +57,7 @@ function gac() {
   echo "Which file to add ??" && read addFile;
   git add ${addFile}
   echo "Please enter the commit comment" && read comment;
-  git commit -m ${comment}
+  git commit -m ${comment} && git status;
 }
 
 # 新規ブランチを作成してチェックアウト
