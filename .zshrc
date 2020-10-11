@@ -46,13 +46,19 @@ function gacp() {
   git branch && git status;
   echo "Which file to add ??" && read addFile;
   git add ${addFile}
-  echo "Type commit comment" && read comment;
+  echo "Please enter the commit comment" && read comment;
   git commit -m ${comment} && git push origin HEAD
+}
+
+# 新規ブランチを作成してチェックアウト
+function gcout() {
+  echo "Please enter the new branch" && read branchName;
+  git checkout -b ${branchName}
 }
 
 # clone
 function clone() {
-  echo "Type enter the URL" && read url;
+  echo "Please enter the URL" && read url;
   git clone ${url}
 }
 
