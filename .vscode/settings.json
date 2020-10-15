@@ -35,5 +35,6 @@
     "**/.factorypath": true
   },
   // ターミナルの分割
-  "terminal.integrated.splitCwd": "initial"
+  "terminal.integrated.splitCwd": "initial",
+  "editor.tabSize": 2
 }
