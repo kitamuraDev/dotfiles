@@ -33,5 +33,7 @@
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
-  }
+  },
+  // ターミナルの分割
+  "terminal.integrated.splitCwd": "initial"
 }
