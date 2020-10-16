@@ -61,7 +61,7 @@ function gac() {
 }
 
 # 新規ブランチを作成してチェックアウト
-function gcout() {
+function gcb() {
   echo "Please enter the new branch" && read branchName;
   git checkout -b ${branchName}
 }
