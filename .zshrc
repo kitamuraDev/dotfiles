@@ -122,6 +122,10 @@ alias vtm='vim ~/.tmux.conf'
 alias vv='vim ~/.vimrc'
 alias vgv='vim ~/.gvimrc'
 
+# ファイル閲覧系
+alias les='less'
+alias vw='view'
+
 # tmux系
 alias tm='tmux'
 
