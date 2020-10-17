@@ -81,6 +81,7 @@ function clone() {
 # -------------------------
 # npm系
 # -------------------------
+alias npmls='alias | grep npm'
 alias nv='npm --version'
 alias nini='npm init'
 alias ns='npm start'
