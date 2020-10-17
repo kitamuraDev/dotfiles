@@ -1,4 +1,7 @@
 [
+  //----------------------------------------------------------
+  // ターミナル
+  //----------------------------------------------------------
   {
     "key": "ctrl+x",
     "command": "workbench.action.terminal.focus",
@@ -8,5 +11,19 @@
     "key": "ctrl+x",
     "command": "workbench.action.focusFirstEditorGroup",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+]",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+alt+cmd+[IntlYen]",
+    "command": "-workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported"
   }
+
+  //----------------------------------------------------------
+  // vim
+  //----------------------------------------------------------
 ]
