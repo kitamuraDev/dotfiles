@@ -30,7 +30,13 @@ alias gb='git branch'
 alias gs='git status'
 alias gss='git status -s'
 alias gd='git diff'
+alias gbsd='git branch && git status && git diff'
 alias gpush='git push origin HEAD'
+alias gpull='git pull origin'
+alias gout='git checkout'
+alias gcd='git checkout develop'
+alias gf='git fetch'
+alias gm='git merge'
 
 # <add, commitの取り消し>
 # usage : addをする前。変更した内容すべてを戻す
