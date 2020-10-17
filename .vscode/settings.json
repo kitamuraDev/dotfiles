@@ -1,24 +1,40 @@
 {
+  //----------------------------------------------------------
+  // vscodeのeditorの設定
+  //----------------------------------------------------------
+  // vscodeのテーマ
+  "workbench.colorTheme": "GitHub Dark",
+  // iconテーマ
   "workbench.iconTheme": "vscode-icons",
+  // 保存時にフォーマットを整えてくれる
   "editor.formatOnSave": true,
-
+  // ターミナルの分割
+  "terminal.integrated.splitCwd": "initial",
+  // タブサイズ
+  "editor.tabSize": 2,
+  // ミニマップを削除
+  "editor.minimap.enabled": false,
+  // 行末の余分なスペースを削除
+  "files.trimTrailingWhitespace": true,
+  // spaceとtabを適切に表示してくれる
+  "editor.renderWhitespace": "all",
   // emmetの言語設定を日本語に
   "emmet.variables": { "lang": "ja" },
-
-  // 構文ハイライトの設定
+  // コメントアウトの色とスタイル
   "editor.tokenColorCustomizations": {
     "comments": {
       "foreground": "#b0c4de",
       "fontStyle": "italic"
     }
   },
+  // gitlens
+  "gitlens.views.repositories.files.layout": "list",
   // prettier
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // gitlens
-  "gitlens.views.repositories.files.layout": "list",
-  "workbench.colorTheme": "GitHub Dark",
+
+  // よくわからない設定。調べて問題ないようだったら削除
   "intelephense.diagnostics.undefinedClassConstants": false,
   "intelephense.diagnostics.undefinedConstants": false,
   "intelephense.diagnostics.undefinedFunctions": false,
@@ -34,7 +50,15 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  // ターミナルの分割
-  "terminal.integrated.splitCwd": "initial",
-  "editor.tabSize": 2
+
+  //----------------------------------------------------------
+  // vscode vimの設定
+  //----------------------------------------------------------
+  "vim.vimrc.enable": true, // vimrcを適用
+  "vim.vimrc.path": "/Users/kitamuramasato/.vimrc", // vimrcのパス
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  "vim.useCtrlKeys": true,
+  "vim.ignorecase": true,
+  "vim.incsearch": true
 }
