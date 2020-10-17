@@ -13,6 +13,8 @@ set autoread
 set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
+" 行末、行頭の移動を[h][l]で可能に
+set whichwrap=h,l,<,>,[,]
 
 " -------------------------
 " 表示設定
@@ -111,7 +113,7 @@ noremap <C-d> <Del>
 " カーソル行の一つ上の行に空行を挿入
 nnoremap <C-k> O<Esc>
 " カーソル行の一つ下の行に空行を挿入
-nnoremap <C-j> :<C-u>call append(expand('.'), '')<Cr>j
+nnoremap <C-j> o<Esc>
 
 " シンプルな行頭・行末・文字検索
 noremap <Space>h  ^
