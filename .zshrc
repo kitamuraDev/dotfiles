@@ -123,7 +123,7 @@ alias vv='vim ~/.vimrc'
 alias vgv='vim ~/.gvimrc'
 
 # ファイル閲覧系
-alias les='less'
+alias les='less -N'
 alias vw='view'
 
 # tmux系
