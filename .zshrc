@@ -124,7 +124,7 @@ alias vgv='vim ~/.gvimrc'
 
 # ファイル閲覧系
 alias les='less -N'
-alias vw='view'
+alias vw='view -M'
 
 # tmux系
 alias tm='tmux'
