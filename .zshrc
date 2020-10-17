@@ -81,8 +81,12 @@ function clone() {
 # -------------------------
 # npm系
 # -------------------------
-
-
+alias nv='npm --version'
+alias nini='npm init'
+alias ns='npm start'
+alias ninst='npm install'
+alias ninstg='npm install -g'
+alias nls='npm ls'
 
 # -------------------------
 # Homebrew系
