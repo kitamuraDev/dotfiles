@@ -89,6 +89,9 @@ inoremap <C-p> <Up>
 inoremap <C-n> <Down>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
+" ctrl + dで削除
+inoremap <C-d> <Del>
+noremap <C-d> <Del>
 
 " Exコマンドを実装する関数を定義
 function! ExecExCommand(cmd)
@@ -104,30 +107,28 @@ inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^a
 noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^a
-" ctrl + dで削除
-inoremap <C-d> <Del>
-noremap <C-d> <Del>
+" シンプルな行頭・行末・文字検索
+noremap <Space>h  ^
+noremap <Space>l  $
+nnoremap <Space>/  *
+" 画面半分先へ。画面半分戻るは[C-u]
+noremap <C-m> <C-d>
+" カーソル固定で下にスクロール。上にスクロールは[C-y]
+noremap <C-i> <C-e>
 
 " カーソル行の一つ上の行に空行を挿入
 nnoremap <C-k> O<Esc>
 " カーソル行の一つ下の行に空行を挿入
 nnoremap <C-j> o<Esc>
 
-" シンプルな行頭・行末・文字検索
-noremap <Space>h  ^
-noremap <Space>l  $
-nnoremap <Space>/  *
-" 画面半分先へ(<C-d>は削除として上書きしている為、以下キーに割り当て)
-noremap <Space>d <C-d>
-
-" 対応する括弧に移動
-nnoremap [ %
-nnoremap ] %
-
 " カーソル位置の単語をyankする
 nnoremap vv vawy
 " カーソル位置の単語をカットする
 nnoremap cc vawc
+
+" 対応する括弧に移動
+nnoremap [ %
+nnoremap ] %
 
 " HTMLとXMLの閉じタグ補完
 augroup MyXML
