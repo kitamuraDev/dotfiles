@@ -6,8 +6,6 @@
   "workbench.colorTheme": "GitHub Dark",
   // iconテーマ
   "workbench.iconTheme": "vscode-icons",
-  // 保存時にフォーマットを整えてくれる
-  "editor.formatOnSave": true,
   // ターミナルの分割
   "terminal.integrated.splitCwd": "initial",
   // タブサイズ
@@ -18,6 +16,12 @@
   "files.trimTrailingWhitespace": true,
   // spaceとtabを適切に表示してくれる
   "editor.renderWhitespace": "all",
+  // prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // ESlint
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   // emmetの言語設定を日本語に
   "emmet.variables": { "lang": "ja" },
   // コメントアウトの色とスタイル
@@ -29,10 +33,6 @@
   },
   // gitlens
   "gitlens.views.repositories.files.layout": "list",
-  // prettier
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
 
   // よくわからない設定。調べて問題ないようだったら削除
   "intelephense.diagnostics.undefinedClassConstants": false,
