@@ -84,6 +84,7 @@ function clone() {
 alias npmls='alias | grep npm'
 alias nv='npm --version'
 alias nini='npm init'
+alias nrb='npm run build'
 alias ns='npm start'
 alias ninst='npm install'
 alias ninstg='npm install -g'
