@@ -23,6 +23,8 @@ hi Comment ctermfg=3
 set title
 " 行番号
 set number
+" 相対行番号
+set relativenumber
 " 現在の行を強調表示
 set cursorline
 " 行末のスペースを可視化
