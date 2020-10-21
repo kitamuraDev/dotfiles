@@ -40,7 +40,7 @@ alias gm='git merge'
 
 # <add, commitの取り消し>
 # usage : addをする前。変更した内容すべてを戻す
-alias gco.='git checkout .'
+alias gout.='git checkout .'
 # usage : addをした後。ステージングから降りる
 function restorefile() {
   echo "Please enter the file name to be removed from the stage" && read restoreFile;
