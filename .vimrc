@@ -122,6 +122,8 @@ noremap <C-i> <C-e>
 nnoremap <C-k> O<Esc>
 " カーソル行の一つ下の行に空行を挿入
 nnoremap <C-j> o<Esc>
+" change normal mode
+inoremap <C-j> <Esc>
 
 " カーソル位置の単語をyankする
 nnoremap vv vawy
