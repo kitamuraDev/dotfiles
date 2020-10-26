@@ -61,5 +61,5 @@
   "vim.useCtrlKeys": true,
   "vim.ignorecase": true,
   "vim.incsearch": true,
-  "editor.lineNumbers": "on"
+  "editor.lineNumbers": "relative"
 }
