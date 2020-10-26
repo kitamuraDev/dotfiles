@@ -33,15 +33,15 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+alt+]",
+    "key": "ctrl+j ctrl+k",
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "ctrl+alt+cmd+[IntlYen]",
-    "command": "-workbench.action.terminal.split",
+    "key": "ctrl+k ctrl+k",
+    "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus && terminalProcessSupported"
-  }
+  },
 
   //----------------------------------------------------------
   // vim
