@@ -1,8 +1,8 @@
 " -------------------------
 " 基本設定
 " -------------------------
-"文字コードをUFT-8に設定
-set fenc=utf-8
+"文字コードをUFT-8に設定(viewコマンドでエラーが出るため一旦コメントアウト)
+" set fenc=utf-8
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
@@ -82,28 +82,21 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " カーソル下の単語を<space*2>ハイライトする
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
-" emacs key-bindings
-noremap <C-p> <Up>
-noremap <C-n> <Down>
-noremap <C-b> <Left>
-noremap <C-f> <Right>
-inoremap <C-p> <Up>
-inoremap <C-n> <Down>
-inoremap <C-b> <Left>
-inoremap <C-f> <Right>
-" ctrl + dで削除
-inoremap <C-d> <Del>
-noremap <C-d> <Del>
+" change normal mode
+inoremap <silent> jj <Esc>
 
 " Exコマンドを実装する関数を定義
 function! ExecExCommand(cmd)
   silent exec a:cmd
   return ''
 endfunction
-" 単語移動(emacs key-bindingsと競合しているため、一旦コメントアウト。)
-" inoremap <silent> <expr> <C-b>b pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
-" inoremap <silent> <expr> <C-f>f pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
+" 単語移動(in insert mode)
+inoremap <silent> <expr> <C-b> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
+inoremap <silent> <expr> <C-f> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
 
+" ctrl + dで削除
+inoremap <C-d> <Del>
+noremap <C-d> <Del>
 " 行頭、行末に移動して挿入モードに切り替え
 inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^a
@@ -122,8 +115,6 @@ noremap <C-i> <C-e>
 nnoremap <C-k> O<Esc>
 " カーソル行の一つ下の行に空行を挿入
 nnoremap <C-j> o<Esc>
-" change normal mode
-inoremap <silent> jj <Esc>
 
 " カーソル位置の単語をyankする
 nnoremap vv vawy
@@ -133,17 +124,6 @@ nnoremap cc vawc
 " 対応する括弧に移動
 nnoremap [ %
 nnoremap ] %
-
-" HTMLとXMLの閉じタグ補完
-augroup MyXML
-  autocmd!
-  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
-  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
-augroup END
-" 括弧の補完
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap [<Enter> []<Left><CR><ESC><S-o>
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 " -------------------------
 " プラグインセットアップ 
