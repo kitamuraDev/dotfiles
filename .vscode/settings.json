@@ -22,28 +22,11 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  // emmetの言語設定を日本語に
-  "emmet.variables": { "lang": "ja" },
-  // コメントアウトの色とスタイル
-  "editor.tokenColorCustomizations": {
-    "comments": {
-      "foreground": "#b0c4de",
-      "fontStyle": "italic"
-    }
-  },
   // gitlens
   "gitlens.views.repositories.files.layout": "list",
-
-  // よくわからない設定。調べて問題ないようだったら削除
-  "intelephense.diagnostics.undefinedClassConstants": false,
-  "intelephense.diagnostics.undefinedConstants": false,
-  "intelephense.diagnostics.undefinedFunctions": false,
-  "intelephense.diagnostics.undefinedMethods": false,
-  "intelephense.diagnostics.undefinedProperties": false,
-  "intelephense.diagnostics.undefinedTypes": false,
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "java.semanticHighlighting.enabled": true,
+  // emmetの言語設定を日本語に
+  "emmet.variables": { "lang": "ja" },
+  // ファイルの除外設定(表示する/しない)以下はデフォルト
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
