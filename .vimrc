@@ -99,9 +99,9 @@ inoremap <C-d> <Del>
 noremap <C-d> <Del>
 " 行頭、行末に移動して挿入モードに切り替え
 inoremap <C-e> <Esc>$a
-inoremap <C-a> <Esc>^a
+inoremap <C-a> <Esc>^i
 noremap <C-e> <Esc>$a
-noremap <C-a> <Esc>^a
+noremap <C-a> <Esc>^i
 " シンプルな行頭・行末・文字検索
 noremap <Space>h  ^
 noremap <Space>l  $
