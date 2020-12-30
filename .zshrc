@@ -46,8 +46,10 @@ function restorefile() {
   echo "Please enter the file name to be removed from the stage" && read restoreFile;
   git restore --staged ${restoreFile}
 }
-# usage : commitを取り消す。ファイルの内容は残る
+# usage : コミットだけ取り消したい
 alias grs='git reset --soft HEAD^'
+# usage : コミットを取り消して、変更内容も取り消したい
+alias grh='git reset --hard HEAD^'
 
 # git commit -m
 function gcm() {
