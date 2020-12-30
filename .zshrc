@@ -24,7 +24,7 @@ alias ghis='git reflog --date=local -n 10'
 
 # Basic commands
 alias gtree='git log --graph'
-alias glogline='git log --oneline'
+alias oneline='git log --oneline -n15'
 alias ga='git add'
 alias gb='git branch'
 alias gs='git status'
