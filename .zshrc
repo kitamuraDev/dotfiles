@@ -99,12 +99,18 @@ alias ninstg='npm install -g'
 alias nls='npm ls'
 
 # -------------------------
+# Firebase系
+# -------------------------
+alias fl="firebase login"
+alias finit="firebase init"
+alias fd="firebase deploy"
+
+# -------------------------
 # Homebrew系
 # -------------------------
 alias bl='brew list' 
 alias bdoc='brew doctor'
 alias bconf='brew --config'
-
 
 # -------------------------
 # mysql系
@@ -214,8 +220,4 @@ fadd() {
 }
 
 
-
-# -------------------------
-#
-# -------------------------
 
