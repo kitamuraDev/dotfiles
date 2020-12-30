@@ -24,8 +24,8 @@ alias ghis='git reflog --date=local -n 10'
 
 # Basic commands
 alias gtree='git log --graph'
-alias ghisall='git log --oneline'
-alias gol='git log --pretty=oneline -n 20 --graph --abbrev-commit'
+alias glogline='git log --oneline'
+alias ga='git add'
 alias gb='git branch'
 alias gs='git status'
 alias gss='git status -s'
@@ -34,7 +34,6 @@ alias gbsd='git branch && git status && git diff'
 alias gpush='git push origin HEAD'
 alias gpull='git pull origin'
 alias gout='git checkout'
-alias gcd='git checkout develop'
 alias gf='git fetch'
 alias gm='git merge'
 
@@ -43,33 +42,40 @@ alias gm='git merge'
 alias gout.='git checkout .'
 # usage : addをした後。ステージングから降りる
 function restorefile() {
+  git status
   echo "Please enter the file name to be removed from the stage" && read restoreFile;
   git restore --staged ${restoreFile}
 }
 # usage : commitを取り消す。ファイルの内容は残る
 alias grs='git reset --soft HEAD^'
 
-# add ~ push
-function gacp() {
+# git commit -m
+function gcm() {
   git branch && git status;
-  echo "Which file to add ??" && read addFile;
-  git add ${addFile}
-  echo "Please enter the commit comment" && read comment;
-  git commit -m ${comment} && git push origin HEAD
+  echo "Please prefix" && read prefix && echo "Please comment" && read comment;
+  git commit -m "<${prefix}>: ${comment}" && git status;
 }
 # add ~ commit
 function gac() {
   git branch && git status;
-  echo "Which file to add ??" && read addFile;
-  git add ${addFile}
-  echo "Please enter the commit comment" && read comment;
-  git commit -m ${comment} && git status;
+  echo "Please select file" && read file;
+  git add ${file}
+  echo "Please prefix" && read prefix && echo "Please comment" && read comment;
+  git commit -m "<${prefix}>: ${comment}" && git status;
+}
+# add ~ push
+function gacp() {
+  git branch && git status;
+  echo "Please select file" && read file;
+  git add ${file}
+  echo "Please prefix" && read prefix && echo "Please comment" && read comment;
+  git commit -m "<${prefix}>: ${comment}" && git push origin HEAD
 }
 
 # 新規ブランチを作成してチェックアウト
 function gcb() {
-  echo "Please enter the new branch" && read branchName;
-  git checkout -b ${branchName}
+  echo "Please enter the new branch" && read branch;
+  git checkout -b ${branch}
 }
 
 # clone
