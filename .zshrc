@@ -154,9 +154,6 @@ alias ll='ls -alFG'
 # カレントディレクトリのパスをコピー
 alias pwdc='pwd | tr -d "\n" | pbcopy'
 
-# .DS_Storeを削除
-alias dsdel='find . -name '.DS_Store' -type f -ls -delete'
-
 # -------------------------
 # cd系
 # -------------------------
