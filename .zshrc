@@ -134,13 +134,14 @@ alias q='exit'
 function vsz() {
   vim ~/.zshrc && source ~/.zshrc;
 }
-alias vtm='vim ~/.tmux.conf'
 alias vv='vim ~/.vimrc'
 alias vgv='vim ~/.gvimrc'
+alias vtm='vim ~/.tmux.conf'
 
 # ファイル閲覧系
 alias les='less -N'
 alias vw='view -M'
+alias vwz='view -M ~/.zshrc'
 
 # tmux系
 alias tm='tmux'
