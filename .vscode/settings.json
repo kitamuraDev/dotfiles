@@ -16,12 +16,6 @@
   "files.trimTrailingWhitespace": true,
   // spaceとtabを適切に表示してくれる
   "editor.renderWhitespace": "all",
-  // prettier
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // ESlint
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
   // gitlens
   "gitlens.views.repositories.files.layout": "list",
   // emmetの言語設定を日本語に
