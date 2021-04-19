@@ -3,7 +3,7 @@
   // vscodeのeditorの設定
   //----------------------------------------------------------
   // vscodeのテーマ
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "GitHub Dark Dimmed",
   // iconテーマ
   "workbench.iconTheme": "vscode-icons",
   // ターミナルの分割
