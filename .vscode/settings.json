@@ -16,6 +16,10 @@
   "files.trimTrailingWhitespace": true,
   // spaceとtabを適切に表示してくれる
   "editor.renderWhitespace": "all",
+  // エディタの表示番号を現在位置の相対番号
+  "editor.lineNumbers": "relative",
+  // パネル表示を右側垂直分割
+  "workbench.panel.defaultLocation": "right"
   // gitlens
   "gitlens.views.repositories.files.layout": "list",
   // emmetの言語設定を日本語に
@@ -38,5 +42,4 @@
   "vim.useCtrlKeys": true,
   "vim.ignorecase": true,
   "vim.incsearch": true,
-  "editor.lineNumbers": "relative"
 }
