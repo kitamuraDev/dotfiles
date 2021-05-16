@@ -1,8 +1,6 @@
 " -------------------------
 " 基本設定
 " -------------------------
-"文字コードをUFT-8に設定(viewコマンドでエラーが出るため一旦コメントアウト)
-" set fenc=utf-8
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
@@ -17,28 +15,28 @@ set showcmd
 " -------------------------
 " 表示設定
 " -------------------------
-" コメントの色を水色
-hi Comment ctermfg=3
-" windowのタイトルを変更
-set title
 " 行番号
 set number
 " 相対行番号
 set relativenumber
 " 現在の行を強調表示
 set cursorline
-" 行末のスペースを可視化
-set listchars=tab:^\ ,trail:~
+
+" ---何事も問題なく使用できていたら削除する---
+"
 " コマンドラインの補完
-set wildmode=list:longest
+" set wildmode=list:longest
 " コマンドラインの履歴を100件保存
-set history=100
+" set history=100
 " 不可視文字を可視化(タブが「▸-」と表示される)
-set list listchars=tab:\▸\-
+" set list listchars=tab:\▸\-
+" インデントはスマートインデント
+" set smartindent
+
+" ---何事も問題なく使用できていたら削除する---
+
 " Tab文字を半角スペースにする
 set expandtab
-" インデントはスマートインデント
-set smartindent
 " インデント幅
 set shiftwidth=2
 " タブキー押下時に挿入される文字幅
@@ -75,8 +73,6 @@ set hlsearch
 " -------------------------
 " key-mapping
 " -------------------------
-" control + tでNERDTreeを起動
-nnoremap <silent><C-t> :NERDTreeToggle<CR>
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " カーソル下の単語を<space*2>ハイライトする
@@ -102,7 +98,7 @@ inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^i
 noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^i
-" シンプルな行頭・行末・文字検索
+" 行頭・行末・文字検索
 noremap <Space>h  ^
 noremap <Space>l  $
 nnoremap <Space>/  *
@@ -124,23 +120,3 @@ nnoremap cc vawc
 " 対応する括弧に移動
 nnoremap [ %
 nnoremap ] %
-
-" -------------------------
-" プラグインセットアップ 
-" -------------------------
-set nocompatible
-filetype off
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle/'))
-endif
-
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'scrooloose/nerdtree'
-
-call neobundle#end()
-
-filetype plugin indent on
-
