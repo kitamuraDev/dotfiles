@@ -19,7 +19,7 @@
   // エディタの表示番号を現在位置の相対番号
   "editor.lineNumbers": "relative",
   // パネル表示を右側垂直分割
-  "workbench.panel.defaultLocation": "right"
+  "workbench.panel.defaultLocation": "right",
   // gitlens
   "gitlens.views.repositories.files.layout": "list",
   // emmetの言語設定を日本語に
@@ -31,6 +31,16 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
+
+  //----------------------------------------------------------
+  // ESLint
+  //----------------------------------------------------------
+  "editor.codeActionsOnSave": {  // ファイル保存時にESLintの自動整形を走らせる
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": false,  // VScode内臓のLinterをオフ
+  "eslint.packageManager": "yarn",
+  "typescript.tsdk": "./node_modules/typescript/lib",  // TypeScriptのバージョンをプロジェクト側に強制
 
   //----------------------------------------------------------
   // vscode vimの設定
