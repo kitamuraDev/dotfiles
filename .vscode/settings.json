@@ -2,28 +2,17 @@
   //----------------------------------------------------------
   // vscodeのeditorの設定
   //----------------------------------------------------------
-  // vscodeのテーマ
-  "workbench.colorTheme": "GitHub Dark Dimmed",
-  // iconテーマ
-  "workbench.iconTheme": "vscode-icons",
-  // ターミナルの分割
-  "terminal.integrated.splitCwd": "initial",
-  // タブサイズ
-  "editor.tabSize": 2,
-  // ミニマップを削除
-  "editor.minimap.enabled": false,
-  // 行末の余分なスペースを削除
-  "files.trimTrailingWhitespace": true,
-  // spaceとtabを適切に表示してくれる
-  "editor.renderWhitespace": "all",
-  // エディタの表示番号を現在位置の相対番号
-  "editor.lineNumbers": "relative",
-  // パネル表示を右側垂直分割
-  "workbench.panel.defaultLocation": "right",
-  // gitlens
-  "gitlens.views.repositories.files.layout": "list",
-  // emmetの言語設定を日本語に
-  "emmet.variables": { "lang": "ja" },
+  "workbench.colorTheme": "GitHub Dark Dimmed",  // vscodeのテーマ
+  "workbench.iconTheme": "vscode-icons",  // iconテーマ
+  "terminal.integrated.splitCwd": "initial",  // ターミナルの分割
+  "editor.tabSize": 2,  // タブサイズ
+  "editor.minimap.enabled": false,  // ミニマップを削除
+  "files.trimTrailingWhitespace": true,  // 行末の余分なスペースを削除
+  "editor.renderWhitespace": "all",  // spaceとtabを適切に表示してくれる
+  "editor.lineNumbers": "relative",  // エディタの表示番号を現在位置の相対番号
+  "workbench.panel.defaultLocation": "right",  // パネル表示を右側垂直分割
+  "gitlens.views.repositories.files.layout": "list",  // gitlens
+  "emmet.variables": { "lang": "ja" },  // emmetの言語設定を日本語に
   // ファイルの除外設定(表示する/しない)以下はデフォルト
   "files.exclude": {
     "**/.classpath": true,
@@ -41,6 +30,29 @@
   "editor.formatOnSave": false,  // VScode内臓のLinterをオフ
   "eslint.packageManager": "yarn",
   "typescript.tsdk": "./node_modules/typescript/lib",  // TypeScriptのバージョンをプロジェクト側に強制
+
+  //----------------------------------------------------------
+  // Prettier
+  //----------------------------------------------------------
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[graphql]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
 
   //----------------------------------------------------------
   // vscode vimの設定
