@@ -22,10 +22,6 @@
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus && terminalProcessSupported"
   },
-  {
-    "key": "ctrl+0",
-    "command": "workbench.view.explorer"
-  },
 
   //----------------------------------------------------------
   // vim
