@@ -1,50 +1,25 @@
 " -------------------------
 " 基本設定
 " -------------------------
-" バックアップファイルを作らない
-set nobackup
-" スワップファイルを作らない
-set noswapfile
-" 編集中のファイルが変更されたら自動で読み直す
-set autoread
-" バッファが編集中でもその他のファイルを開けるように
-set hidden
-" 入力中のコマンドをステータスに表示する
-set showcmd
+set encoding=utf-8 " ファイル読み込み時の文字コード
+scriptencoding utf-8 " Vim script内でマルチバイト文字を使う場合の設定
+set nobackup " バックアップファイルを作らない
+set noswapfile " スワップファイルを作らない
+set autoread " 編集中のファイルが変更されたら自動で読み直す
+set hidden " バッファが編集中でもその他のファイルを開けるように
+set showcmd " 入力中のコマンドをステータスに表示
 
 " -------------------------
 " 表示設定
 " -------------------------
-" 行番号
-set number
-" 相対行番号
-set relativenumber
-" 現在の行を強調表示
-set cursorline
-
-" ---何事も問題なく使用できていたら削除する---
-"
-" コマンドラインの補完
-" set wildmode=list:longest
-" コマンドラインの履歴を100件保存
-" set history=100
-" 不可視文字を可視化(タブが「▸-」と表示される)
-" set list listchars=tab:\▸\-
-" インデントはスマートインデント
-" set smartindent
-
-" ---何事も問題なく使用できていたら削除する---
-
-" Tab文字を半角スペースにする
-set expandtab
-" インデント幅
-set shiftwidth=2
-" タブキー押下時に挿入される文字幅
-set softtabstop=2
-" 対応する括弧を強調表示
-set showmatch
-" シンタックスハイライト
-syntax on
+set number " 行番号
+set relativenumber " 相対行番号
+set cursorline " 現在の行を強調表示
+set expandtab " Tab文字を半角スペース
+set shiftwidth=2 " インデント幅
+set softtabstop=2 " タブキー押下時に挿入される文字幅
+set showmatch " 対応する括弧を強調表示
+syntax on " シンタックスハイライト
 
 " インサートモード時は縦棒カーソル
 if has('vim_starting')
@@ -59,22 +34,17 @@ endif
 " -------------------------
 " 検索
 " -------------------------
-" 検索するときに大文字小文字を区別しない
-set ignorecase
-" 小文字で検索すると大文字と小文字を無視して検索
-set smartcase
-" 検索がファイル末尾まで進んだら、ファイル先頭から再び検索
-set wrapscan
-" インクリメンタル検索 (検索ワードの最初の文字を入力した時点で検索が開始)
-set incsearch
-" 検索結果をハイライト表示
-set hlsearch
+set incsearch " インクリメンタル検索 (検索ワードの最初の文字を入力した時点で検索が開始)
+set ignorecase " 検索するときに大文字小文字を区別しない
+set smartcase " 小文字で検索すると大文字と小文字を無視して検索
+set hlsearch " 検索結果をハイライト表示
+set wrapscan " 検索がファイル末尾まで進んだら、ファイル先頭から再び検索
 
 " -------------------------
 " key-mapping
 " -------------------------
 " ESC連打でハイライト解除
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 " カーソル下の単語を<space*2>ハイライトする
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
@@ -93,15 +63,18 @@ inoremap <silent> <expr> <C-f> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal 
 " ctrl + dで削除
 inoremap <C-d> <Del>
 noremap <C-d> <Del>
+
 " 行頭、行末に移動して挿入モードに切り替え
 inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^i
 noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^i
+
 " 行頭・行末・文字検索
 noremap <Space>h  ^
 noremap <Space>l  $
 nnoremap <Space>/  *
+
 " 画面半分先へ。画面半分戻るは[C-u]
 noremap <C-m> <C-d>
 " カーソル固定で下にスクロール。上にスクロールは[C-y]
@@ -112,9 +85,11 @@ nnoremap <C-k> O<Esc>
 " カーソル行の一つ下の行に空行を挿入
 nnoremap <C-j> o<Esc>
 
-" カーソル位置の単語をyankする
+" カーソル位置から行末までをyank
+nnoremap yl y$
+" カーソル位置の単語をyank
 nnoremap vv vawy
-" カーソル位置の単語をカットする
+" カーソル位置の単語をカット
 nnoremap cc vawc
 
 " 対応する括弧に移動

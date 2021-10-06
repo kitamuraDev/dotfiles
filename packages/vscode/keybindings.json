@@ -21,9 +21,5 @@
     "key": "ctrl+k ctrl+k",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus && terminalProcessSupported"
-  },
-
-  //----------------------------------------------------------
-  // vim
-  //----------------------------------------------------------
+  }
 ]

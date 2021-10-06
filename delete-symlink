@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -eu
+VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
+cd `dirname $0`
+
+# remove vscode settings
+for file in settings.json keybindings.json; do
+  rm -rf "${VSCODE_SETTING_DIR}/${file}"
+done
+
+# remove dotfiles
+for file in ~/.gitconfig ~/.vimrc ~/.zshrc; do
+  rm -rf "${file}"
+done
