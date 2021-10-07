@@ -1,6 +1,7 @@
 # -------------------------
 # 基本設定
 # -------------------------
+export PATH="/usr/local/sbin:$PATH"
 # starship
 eval "$(starship init zsh)"
 # zshの補完を有効化
