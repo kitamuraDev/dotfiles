@@ -29,9 +29,8 @@ alias gss='git status -s'
 alias gd='git diff'
 alias gf='git fetch'
 alias gm='git merge'
-alias gco='git checkout'
+alias gst='git switch'
 alias gpush='git push origin HEAD'
-alias gpull='git pull origin'
 
 # git log
 alias oneline='git log --oneline -n10'
@@ -41,8 +40,8 @@ alias ghis='git reflog --date=local -n 10'
 # 「ブランチ」「ステータス」「差分」の確認
 alias gbsd='git branch && git status && git diff'
 
-# ステージング前のファイルの状態を取り消す
-alias gco.='git checkout .'
+# ステージング前のファイルの状態を取り消す(clear unstaging)
+alias cus='git restore .'
 
 # ローカルとリモートの比較
 alias gdmain='git fetch origin main && git diff main origin/main'
@@ -50,7 +49,7 @@ alias gdmain='git fetch origin main && git diff main origin/main'
 # ローカルとリモートの「作業ブランチ」と「mainブランチ」を同期
 # 使いどころ：作業ブランチで作業を終えてリモートへプッシュするとき
 # 「作業ブランチをプッシュ」&&「mainブランチへ移動」&&「作業ブランチをmeinブランチへマージ」&&「mainブランチをプッシュ」
-alias sync='git push origin HEAD && git checkout main && git merge - && git push origin HEAD'
+alias sync='git push origin HEAD && git switch main && git merge - && git push origin HEAD'
 
 # ステージングを取り消す
 function restore() {
@@ -62,7 +61,7 @@ function restore() {
 # 新規ブランチを作成してチェックアウト
 function gcb() {
   echo "Please enter the new branch" && read branch;
-  git checkout -b ${branch}
+  git switch -c ${branch}
 }
 
 # -------------------------
@@ -115,7 +114,7 @@ fcb() {
   local branches branch
   branches=$(git branch -vv) &&
   branch=$(echo "$branches" | fzf +m) &&
-  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+  git switch $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
 # インタラクティブなgit add diff
