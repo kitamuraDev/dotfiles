@@ -1,16 +1,17 @@
 {
   //----------------------------------------------------------
-  // vscode基本設定
+  // vscode basic settings
   //----------------------------------------------------------
   "workbench.colorTheme": "GitHub Dark Dimmed",  // vscodeのテーマ
   "workbench.iconTheme": "vscode-icons",  // iconテーマ
+  "editor.guides.bracketPairs": true,  // ブラケット強調
   "terminal.integrated.splitCwd": "initial",  // ターミナルの分割
+  "workbench.panel.defaultLocation": "right",  // パネル表示を右側垂直分割
   "editor.tabSize": 2,  // タブサイズ
   "editor.minimap.enabled": false,  // ミニマップを削除
   "files.trimTrailingWhitespace": true,  // 行末の余分なスペースを削除
-  "editor.renderWhitespace": "all",  // spaceとtabを適切に表示してくれる
+  "editor.renderWhitespace": "all",  // spaceとtabを適切に表示
   "editor.lineNumbers": "relative",  // エディタの表示番号を現在位置の相対番号
-  "workbench.panel.defaultLocation": "right",  // パネル表示を右側垂直分割
   "gitlens.views.repositories.files.layout": "list",  // gitlens
   "emmet.variables": { "lang": "ja" },  // emmetの言語設定を日本語に
   "typescript.tsdk": "./node_modules/typescript/lib",  // TypeScriptのバージョンをプロジェクト側に強制
@@ -58,7 +59,7 @@
   },
 
   //----------------------------------------------------------
-  // vscode vimの設定
+  // vscode vim
   //----------------------------------------------------------
   "vim.vimrc.enable": true, // vimrcを適用
   "vim.vimrc.path": "/Users/kitamuramasato/.vimrc", // vimrcのパス
