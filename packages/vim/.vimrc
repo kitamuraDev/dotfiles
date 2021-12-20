@@ -85,13 +85,8 @@ nnoremap <C-k> O<Esc>
 " カーソル行の一つ下の行に空行を挿入
 nnoremap <C-j> o<Esc>
 
-" カーソル位置から行末までをyank
+" カーソル位置から行末までをycdv
 nnoremap yl y$
-" カーソル位置の単語をyank
-nnoremap vv vawy
-" カーソル位置の単語をカット
-nnoremap cc vawc
-
-" 対応する括弧に移動
-nnoremap [ %
-nnoremap ] %
+nnoremap cl c$
+nnoremap dl d$
+nnoremap vl v$
