@@ -14,6 +14,7 @@
   "editor.lineNumbers": "relative",  // エディタの表示番号を現在位置の相対番号
   "gitlens.views.repositories.files.layout": "list",  // gitlens
   "emmet.variables": { "lang": "ja" },  // emmetの言語設定を日本語に
+  "javascript.updateImportsOnFileMove.enabled": "always", // importの自動更新
   "typescript.tsdk": "./node_modules/typescript/lib",  // TypeScriptのバージョンをプロジェクト側に強制
   // ファイルの除外設定(表示する/しない)以下はデフォルト
   "files.exclude": {
@@ -67,5 +68,5 @@
   "vim.easymotion": true,
   "vim.useCtrlKeys": true,
   "vim.ignorecase": true,
-  "vim.incsearch": true,
+  "vim.incsearch": true
 }
