@@ -67,5 +67,11 @@
   "vim.easymotion": true,
   "vim.useCtrlKeys": true,
   "vim.ignorecase": true,
-  "vim.incsearch": true
+  "vim.incsearch": true,
+  "vim.leader": "<space>", // .vimrcのmapleaderはvscode側では認識されないため、こちらでも設定
+  "vim.normalModeKeyBindings": [
+    { "before": ["leader", "h"], "after": ["^"] },
+    { "before": ["leader", "l"], "after": ["$"] },
+    { "before": ["leader", "/"], "after": ["*"] }
+  ],
 }

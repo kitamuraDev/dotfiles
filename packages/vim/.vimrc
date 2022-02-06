@@ -43,10 +43,10 @@ set wrapscan " 検索がファイル末尾まで進んだら、ファイル先�
 " -------------------------
 " key-mapping
 " -------------------------
+let mapleader = "\<space>"
+
 " ESC連打でハイライト解除
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
-" カーソル下の単語を<space*2>ハイライトする
-nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 
 " change normal mode
 inoremap <silent> jj <Esc>
@@ -71,9 +71,9 @@ noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^i
 
 " 行頭・行末・文字検索
-noremap <Space>h  ^
-noremap <Space>l  $
-nnoremap <Space>/  *
+noremap <Leader>h  ^
+noremap <Leader>l  $
+nnoremap <Leader>/  *
 
 " 画面半分先へ。画面半分戻るは[C-u]
 noremap <C-m> <C-d>
