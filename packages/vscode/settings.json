@@ -6,7 +6,6 @@
   "workbench.iconTheme": "vscode-icons",  // iconテーマ
   "editor.guides.bracketPairs": true,  // ブラケット強調
   "terminal.integrated.splitCwd": "initial",  // ターミナルの分割
-  "workbench.panel.defaultLocation": "right",  // パネル表示を右側垂直分割
   "editor.tabSize": 2,  // タブサイズ
   "editor.minimap.enabled": false,  // ミニマップを削除
   "files.trimTrailingWhitespace": true,  // 行末の余分なスペースを削除
@@ -28,7 +27,7 @@
   // ESLint
   //----------------------------------------------------------
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
+    "source.fixAll.eslint": true
   },
   "editor.formatOnSave": false,
   "eslint.packageManager": "yarn",
