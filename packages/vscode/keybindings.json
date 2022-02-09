@@ -3,14 +3,6 @@
   // ターミナル
   //----------------------------------------------------------
   {
-    "key": "ctrl+j",
-    "command": "workbench.action.togglePanel"
-  },
-  {
-    "key": "cmd+j",
-    "command": "-workbench.action.togglePanel"
-  },
-  {
     "key": "ctrl+j ctrl+k",
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus && terminalProcessSupported"
