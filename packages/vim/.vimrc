@@ -43,6 +43,7 @@ set wrapscan " 検索がファイル末尾まで進んだら、ファイル先�
 " -------------------------
 " key-mapping
 " -------------------------
+" leader設定
 let mapleader = "\<space>"
 
 " ESC連打でハイライト解除
@@ -79,11 +80,6 @@ nnoremap <Leader>/  *
 noremap <C-m> <C-d>
 " カーソル固定で下にスクロール。上にスクロールは[C-y]
 noremap <C-i> <C-e>
-
-" カーソル行の一つ上の行に空行を挿入
-nnoremap <C-k> O<Esc>
-" カーソル行の一つ下の行に空行を挿入
-nnoremap <C-j> o<Esc>
 
 " カーソル位置から行末までをycdv
 nnoremap yl y$

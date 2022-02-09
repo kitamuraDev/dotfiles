@@ -65,13 +65,27 @@
   "vim.vimrc.path": "/Users/kitamuramasato/.vimrc", // vimrcのパス
   "vim.hlsearch": true,
   "vim.easymotion": true,
+  "vim.easymotionKeys": "sdfghjkl",
   "vim.useCtrlKeys": true,
   "vim.ignorecase": true,
   "vim.incsearch": true,
   "vim.leader": "<space>", // .vimrcのmapleaderはvscode側では認識されないため、こちらでも設定
-  "vim.normalModeKeyBindings": [
+  "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["leader", "h"], "after": ["^"] },
     { "before": ["leader", "l"], "after": ["$"] },
-    { "before": ["leader", "/"], "after": ["*"] }
+    { "before": ["leader", "b"], "after": ["%"] }, // 対応する括弧
+    { "before": ["leader", "/"], "after": ["*"] }, // 文字検索
+    { "before": ["leader", "p"], "commands": ["workbench.action.showCommands"] },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "e"], "commands": ["workbench.view.explorer"] },
+    { "before": ["leader", "a"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
+
+    // デフォルトの挙動修正
+    {"before": ["u"], "commands": [{"command": "undo"}]},
+    {"before": ["<C-r>"], "commands": [{"command": "redo"}]},
   ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {"before": [";",";"],"commands": ["editor.action.triggerSuggest"]}, // サジェスト起動
+  ]
 }
