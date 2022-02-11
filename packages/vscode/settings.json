@@ -76,7 +76,8 @@
     { "before": ["leader", "b"], "after": ["%"] }, // 対応する括弧
     { "before": ["leader", "/"], "after": ["*"] }, // 文字検索
     { "before": ["leader", "p"], "commands": ["workbench.action.showCommands"] },
-    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "q"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "f"], "commands": ["workbench.action.showAllEditors"] },
     { "before": ["leader", "e"], "commands": ["workbench.view.explorer"] },
     { "before": ["leader", "a"], "commands": ["workbench.action.findInFiles"] },
     { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
