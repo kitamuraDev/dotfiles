@@ -18,6 +18,7 @@ setopt auto_cd
 # -------------------------
 alias g='git'
 alias gmj='gitmoji'
+alias gc='gitmoji -c'
 alias gitls='alias | grep git'
 
 # Basic commands
@@ -95,6 +96,7 @@ alias ....='cd ../../..'
 # ファイル閲覧系
 alias les='less -N'
 alias vw='view -M'
+alias showz='view -M ~/.zshrc'
 
 # tree系
 alias tr='tree'
