@@ -66,13 +66,6 @@ function gcb() {
 }
 
 # -------------------------
-# Firebase系
-# -------------------------
-alias fl="firebase login"
-alias finit="firebase init"
-alias fd="firebase deploy"
-
-# -------------------------
 # Homebrew系
 # -------------------------
 alias bl='brew list'
@@ -137,4 +130,12 @@ fadd() {
       git add $addfiles
     fi
   done
+}
+
+# カレントディレクトリ配下のディレクトリを曖昧検索して移動
+fd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
 }
