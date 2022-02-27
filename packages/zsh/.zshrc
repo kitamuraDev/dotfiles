@@ -60,7 +60,7 @@ function restore() {
 }
 
 # 新規ブランチを作成してチェックアウト
-function gcb() {
+function gsc() {
   echo "Please enter the new branch" && read branch;
   git switch -c ${branch}
 }
