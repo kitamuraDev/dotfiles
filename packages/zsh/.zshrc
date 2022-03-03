@@ -17,9 +17,9 @@ setopt auto_cd
 # git
 # -------------------------
 alias g='git'
+alias gitls='alias | grep git'
 alias gmj='gitmoji'
 alias gc='gitmoji -c'
-alias gitls='alias | grep git'
 
 # Basic commands
 alias ga='git add'
@@ -28,6 +28,9 @@ alias gb='git branch'
 alias gs='git status'
 alias gss='git status -s'
 alias gd='git diff'
+alias gdc='git diff --cached'
+alias gsh='git stash'
+alias gshls'git stash list'
 alias gf='git fetch'
 alias gm='git merge'
 alias gst='git switch'
