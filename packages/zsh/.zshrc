@@ -50,10 +50,8 @@ alias cus='git restore .'
 # ローカルとリモートの比較
 alias gdmain='git fetch origin main && git diff main origin/main'
 
-# ローカルとリモートの「作業ブランチ」と「mainブランチ」を同期
-# 使いどころ：作業ブランチで作業を終えてリモートへプッシュするとき
-# 「作業ブランチをプッシュ」&&「mainブランチへ移動」&&「作業ブランチをmeinブランチへマージ」&&「mainブランチをプッシュ」
-alias sync='git push origin HEAD && git switch main && git merge - && git push origin HEAD'
+# ローカルの作業ブランチをmainブランチにマージ
+alias tomain='git switch main && git merge -'
 
 # ステージングを取り消す
 function restore() {
