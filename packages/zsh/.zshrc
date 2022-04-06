@@ -35,6 +35,7 @@ alias gf='git fetch'
 alias gm='git merge'
 alias gst='git switch'
 alias gpush='git push origin HEAD'
+alias gpull='git pull --rebase origin main'
 
 # git log
 alias oneline='git log --oneline -n10'
