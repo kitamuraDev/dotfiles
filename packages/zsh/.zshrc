@@ -2,6 +2,9 @@
 # 基本設定
 # -------------------------
 export PATH="/usr/local/sbin:$PATH"
+# zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# bindkey '\t' autosuggest-accept
 # starship
 eval "$(starship init zsh)"
 # zshの補完を有効化
