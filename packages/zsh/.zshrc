@@ -45,6 +45,9 @@ alias oneline='git log --oneline -n10'
 alias ggp='git log --graph'
 alias ghis='git reflog --date=local -n 10'
 
+# mainブランチ以外を削除
+alias del_other_main='git branch | grep -v main | xargs git branch -D'
+
 # 「ブランチ」「ステータス」「差分」の確認
 alias gbsd='git branch && git status && git diff'
 
