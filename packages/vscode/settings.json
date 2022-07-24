@@ -49,13 +49,16 @@
   "[javascriptreact]": {
     "editor.formatOnSave": true
   },
-  "[json]": {
-    "editor.formatOnSave": true
-  },
   "[typescript]": {
     "editor.formatOnSave": true
   },
   "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[yaml]": {
     "editor.formatOnSave": true
   },
 
