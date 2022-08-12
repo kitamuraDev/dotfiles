@@ -2,7 +2,7 @@
   //----------------------------------------------------------
   // vscode basic settings
   //----------------------------------------------------------
-  "workbench.colorTheme": "GitHub Dark Dimmed",  // vscodeのテーマ
+  "workbench.colorTheme": "GitHub Dark Default",  // vscodeのテーマ
   "workbench.iconTheme": "vscode-icons",  // iconテーマ
   "editor.guides.bracketPairs": true,  // ブラケット強調
   "terminal.integrated.splitCwd": "initial",  // ターミナルの分割
