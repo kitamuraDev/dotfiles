@@ -14,31 +14,22 @@ cd `dirname $0`
 # Homebrew
 # -------------------------
 if [ ! -f /usr/local/bin/brew ]; then
-  echo "installing homebrew..."
+  echo "installing homebrew ..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-echo "run brew doctor..."
-which brew >/dev/null 2>&1 && brew doctor
-
-echo "run brew update..."
-which brew >/dev/null 2>&1 && brew update
-
-echo "ok. run brew upgrade..."
-brew upgrade
-
+# ※デフォルトで git が使えるか確認した方がいい
 if [ ! -d ~/dotfiles ]; then
   cd ~
   git clone https://github.com/kitamuraDev/dotfiles.git
 fi
 
 # brew bundle
-echo "ok. run brew bundle..."
+echo "run brew bundle ..."
 brew bundle -v --file=~/dotfiles/Brewfile
 
-brew cleanup
-
-# conditional for starshipm config file
+# starship の config ファイルをを作成する
+# starship.toml は ~/.config 直下に置く必要がある
 if [ ! -d ~/.config ]; then
   mkdir ~/.config
 fi
