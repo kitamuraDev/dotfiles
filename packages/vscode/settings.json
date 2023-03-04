@@ -92,5 +92,11 @@
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     {"before": [";",";"],"commands": ["editor.action.triggerSuggest"]}, // サジェスト起動
-  ]
+  ],
+
+  // Java
+  "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-18.0.2.1.jdk/Contents/Home",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  }
 }
