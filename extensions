@@ -1,3 +1,4 @@
+astro-build.astro-vscode
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
@@ -6,5 +7,13 @@ GitHub.github-vscode-theme
 humao.rest-client
 mhutchie.git-graph
 MS-CEINTL.vscode-language-pack-ja
+redhat.java
+VisualStudioExptTeam.intellicode-api-usage-examples
+VisualStudioExptTeam.vscodeintellicode
+vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+vscjava.vscode-java-pack
+vscjava.vscode-java-test
+vscjava.vscode-maven
 vscode-icons-team.vscode-icons
 vscodevim.vim
