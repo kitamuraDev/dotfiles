@@ -16,17 +16,18 @@ brew "tree"
 brew "vim"
 brew "wget"
 brew "zsh"
-brew "zsh-autosuggestions"
 
 # cask
 cask_args appdir: "/Applications"
-cask "clipy"
 cask "dropbox"
 cask "google-chrome"
+cask "google-japanese-ime"
 cask "firefox"
 cask "notion"
+cask "raycast"
 cask "slack"
 cask "visual-studio-code"
+cask "warp"
 cask "zoom"
 
 # mas
