@@ -14,6 +14,7 @@ brew "starship"
 brew "stow"
 brew "tree"
 brew "vim"
+brew "volta"
 brew "wget"
 brew "zsh"
 
