@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# -e : スクリプトの実行中にエラーが起こった場合はそこで停止
+# -u : 未定義の変数があればそこで停止
+set -eu
+
+# vscode setting directory
+VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
+
+# stow
+stow -v -d ~/dotfiles/packages -t "${VSCODE_SETTING_DIR}" vscode
+
+# vscode extensions
+cat ~/dotfiles/extensions | while read line
+do
+  echo "installing vscode extensions..."
+  code --install-extension $line
+done

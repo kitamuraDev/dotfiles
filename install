@@ -4,48 +4,31 @@
 # -u : 未定義の変数があればそこで停止
 set -eu
 
-# vscode setting directory
-VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
-
 # 実行するスクリプトの位置に移動
 cd `dirname $0`
 
-# -------------------------
 # Homebrew
-# -------------------------
-if [ ! -f /usr/local/bin/brew ]; then
-  echo "installing homebrew ..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
+# if [ ! -f /usr/local/bin/brew ]; then
+#   echo "installing homebrew ..."
+#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# fi
 
-# ※デフォルトで git が使えるか確認した方がいい
-if [ ! -d ~/dotfiles ]; then
-  cd ~
-  git clone https://github.com/kitamuraDev/dotfiles.git
-fi
+# if [ ! -d ~/dotfiles ]; then
+#   cd ~
+#   git clone https://github.com/kitamuraDev/dotfiles.git
+# fi
 
 # brew bundle
 echo "run brew bundle ..."
 brew bundle -v --file=~/dotfiles/Brewfile
 
-# starship の config ファイルをを作成する
-# starship.toml は ~/.config 直下に置く必要がある
+# starship の config ファイルをを作成する（starship.toml は ~/.config 直下に置く必要があるため）
 if [ ! -d ~/.config ]; then
   mkdir ~/.config
 fi
 
 # stow
 stow -v -d ~/dotfiles/packages -t ~ git starship vim zsh
-stow -v -d ~/dotfiles/packages -t "${VSCODE_SETTING_DIR}" vscode
 
 # .zshrcを読み込む
 source ~/.zshrc
-
-# -------------------------
-# vscode extensions
-# -------------------------
-cat ~/dotfiles/extensions | while read line
-do
-  echo "installing vscode extensions..."
-  code --install-extension $line
-done

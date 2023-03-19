@@ -1,23 +1,30 @@
-# .dotfiles
+<br />
 
-## インストールスクリプト
+<h1 align="center">.dotfiles</h1>
 
-```
-curl -o - https://raw.githubusercontent.com/kitamuraDev/dotfiles/main/install | sh
-```
+<br />
+
+## セットアップ
+
+1. Homebrew インストール
+   - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+   - Homebrew に従いパスを通す
+2. git インストール
+   - `brew install git`
+3. インストールスクリプトを叩く
+   - `curl -o - https://raw.githubusercontent.com/kitamuraDev/dotfiles/main/install | sh`
+4. VScode を起動 && `~/Library/Application\ Support/Code/User/settings.json`を削除（シンボリックリンクを貼るので）
+5. VScode セットアップスクリプトを叩く
+   - `sh ~/dotfiles/vscode_setup`
+6. .gitignore のシンボリックリンクを貼る
+   - `ln -s ~/dotfiles/.gitignore ~`
+
+<br />
 
 ## symlink が生きているファイルを事前に削除
 
 ```
 curl -o - https://raw.githubusercontent.com/kitamuraDev/dotfiles/main/delete-symlink | sh
-```
-
-## .gitignore を手動で symlink を貼る
-
-※ .gitignore に関しては手動で symlink を貼る（stow でリンクできないか模索中。package/gitignore でディレクトリを作ればいけるかも）
-
-```
-ln -s ~/dotfiles/.gitignore ~
 ```
 
 <br />
@@ -40,10 +47,3 @@ ln -s ~/dotfiles/.gitignore ~
     │   └── settings.json
     └── zsh
 ```
-
-<br />
-
-## 環境
-
-- OS : macOS Catalina 10.15.7
-- Shell : Zsh
