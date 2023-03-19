@@ -2,6 +2,9 @@
 # 基本設定
 # -------------------------
 export PATH="/usr/local/sbin:$PATH"
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 # starship
 eval "$(starship init zsh)"
 # zshの補完を有効化
