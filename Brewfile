@@ -21,7 +21,6 @@ brew "zsh"
 cask_args appdir: "/Applications"
 cask "dropbox"
 cask "google-chrome"
-cask "google-japanese-ime"
 cask "firefox"
 cask "notion"
 cask "raycast"
@@ -29,6 +28,3 @@ cask "slack"
 cask "visual-studio-code"
 cask "warp"
 cask "zoom"
-
-# mas
-mas "Xcode", id: 497799835
