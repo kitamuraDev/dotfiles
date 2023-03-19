@@ -23,6 +23,7 @@ alias g='git'
 alias gitls='alias | grep git'
 alias gmj='gitmoji'
 alias gc='gitmoji -c'
+alias gcd='cd $(ghq root)/$(ghq list | peco)'
 
 # Basic commands
 alias ga='git add'
