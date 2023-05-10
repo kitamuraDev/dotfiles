@@ -86,9 +86,19 @@
     { "before": ["leader", "a"], "commands": ["workbench.action.findInFiles"] },
     { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
 
-    // デフォルトの挙動修正
+    // 検索結果を画面中央に
+    { "before": ["n"], "after": ["n", "z", "z"] },
+    { "before": ["N"], "after": ["N", "z", "z"] },
+
+    // peek definition
+    { "before": ["leader", "d"], "commands": [{ "command": "editor.action.peekDefinition" }] },
+
+    // easy motion
+    { "before": ["f"], "after": ["<Leader>", "<Leader>", "2", "s"] },
+
+    // undo / redo
     {"before": ["u"], "commands": [{"command": "undo"}]},
-    {"before": ["<C-r>"], "commands": [{"command": "redo"}]},
+    {"before": ["r"], "commands": [{"command": "redo"}]},
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     {"before": [";",";"],"commands": ["editor.action.triggerSuggest"]}, // サジェスト起動
