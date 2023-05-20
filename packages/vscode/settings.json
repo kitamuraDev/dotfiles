@@ -2,19 +2,19 @@
   //----------------------------------------------------------
   // vscode basic settings
   //----------------------------------------------------------
-  "workbench.colorTheme": "GitHub Dark Default",  // vscodeのテーマ
-  "workbench.iconTheme": "vscode-icons",  // iconテーマ
-  "editor.guides.bracketPairs": true,  // ブラケット強調
-  "terminal.integrated.splitCwd": "initial",  // ターミナルの分割
-  "editor.tabSize": 2,  // タブサイズ
-  "editor.minimap.enabled": false,  // ミニマップを削除
-  "files.trimTrailingWhitespace": true,  // 行末の余分なスペースを削除
-  "editor.renderWhitespace": "all",  // spaceとtabを適切に表示
-  "editor.lineNumbers": "relative",  // エディタの表示番号を現在位置の相対番号
-  "gitlens.views.repositories.files.layout": "list",  // gitlens
-  "emmet.variables": { "lang": "ja" },  // emmetの言語設定を日本語に
+  "workbench.colorTheme": "GitHub Dark Default", // vscodeのテーマ
+  "workbench.iconTheme": "vscode-icons", // iconテーマ
+  "editor.guides.bracketPairs": true, // ブラケット強調
+  "terminal.integrated.splitCwd": "initial", // ターミナルの分割
+  "editor.tabSize": 2, // タブサイズ
+  "editor.minimap.enabled": false, // ミニマップを削除
+  "files.trimTrailingWhitespace": true, // 行末の余分なスペースを削除
+  "editor.renderWhitespace": "all", // spaceとtabを適切に表示
+  "editor.lineNumbers": "relative", // エディタの表示番号を現在位置の相対番号
+  "gitlens.views.repositories.files.layout": "list", // gitlens
+  "emmet.variables": { "lang": "ja" }, // emmetの言語設定を日本語に
   "javascript.updateImportsOnFileMove.enabled": "always", // importの自動更新
-  "typescript.tsdk": "./node_modules/typescript/lib",  // TypeScriptのバージョンをプロジェクト側に強制
+  "typescript.tsdk": "./node_modules/typescript/lib", // TypeScriptのバージョンをプロジェクト側に強制
   // ファイルの除外設定(表示する/しない)以下はデフォルト
   "files.exclude": {
     "**/.classpath": true,
@@ -86,9 +86,12 @@
     { "before": ["leader", "a"], "commands": ["workbench.action.findInFiles"] },
     { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
 
-    // 検索結果を画面中央に
+    // center aligned
     { "before": ["n"], "after": ["n", "z", "z"] },
     { "before": ["N"], "after": ["N", "z", "z"] },
+    { "before": ["H"], "after": ["H", "z", "z"] },
+    { "before": ["M"], "after": ["M", "z", "z"] },
+    { "before": ["L"], "after": ["L", "z", "z"] },
 
     // peek definition
     { "before": ["leader", "d"], "commands": [{ "command": "editor.action.peekDefinition" }] },
@@ -97,11 +100,11 @@
     { "before": ["f"], "after": ["<Leader>", "<Leader>", "2", "s"] },
 
     // undo / redo
-    {"before": ["u"], "commands": [{"command": "undo"}]},
-    {"before": ["r"], "commands": [{"command": "redo"}]},
+    { "before": ["u"], "commands": [{ "command": "undo" }] },
+    { "before": ["r"], "commands": [{ "command": "redo" }] }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
-    {"before": [";",";"],"commands": ["editor.action.triggerSuggest"]}, // サジェスト起動
+    { "before": [";", ";"], "commands": ["editor.action.triggerSuggest"] } // サジェスト起動
   ],
 
   // Java
