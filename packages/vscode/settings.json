@@ -26,7 +26,6 @@
   //----------------------------------------------------------
   // ESLint
   //----------------------------------------------------------
-  "eslint.packageManager": "yarn",
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": [ // 配列で指定することによって、順次実行される
     "source.addMissingImports",
