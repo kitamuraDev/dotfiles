@@ -11,5 +11,25 @@
     "key": "ctrl+k ctrl+k",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus && terminalProcessSupported"
-  }
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.debug.run",
+    "when": "debuggersAvailable && debugState != 'initializing'"
+  },
+  {
+    "key": "ctrl+f5",
+    "command": "-workbench.action.debug.run",
+    "when": "debuggersAvailable && debugState != 'initializing'"
+  },
+  {
+    "key": "ctrl+f5",
+    "command": "workbench.action.reloadWindow",
+    "when": "isDevelopment"
+  },
+  {
+    "key": "cmd+r",
+    "command": "-workbench.action.reloadWindow",
+    "when": "isDevelopment"
+  },
 ]
