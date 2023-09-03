@@ -78,12 +78,16 @@
     { "before": ["leader", "l"], "after": ["$"] },
     { "before": ["leader", "b"], "after": ["%"] }, // 対応する括弧
     { "before": ["leader", "/"], "after": ["*"] }, // 文字検索
-    { "before": ["leader", "p"], "commands": ["workbench.action.showCommands"] },
-    { "before": ["leader", "q"], "commands": ["workbench.action.quickOpen"] },
-    { "before": ["leader", "f"], "commands": ["workbench.action.showAllEditors"] },
-    { "before": ["leader", "e"], "commands": ["workbench.view.explorer"] },
-    { "before": ["leader", "a"], "commands": ["workbench.action.findInFiles"] },
-    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["leader", "p"], "commands": ["workbench.action.showCommands"] },               // コマンド表示
+    { "before": ["leader", "q"], "commands": ["workbench.action.quickOpen"] },                  // クイックオープン
+    { "before": ["leader", "f"], "commands": ["workbench.action.showAllEditors"] },             // 現在開いているファイルを検索
+    { "before": ["leader", "e"], "commands": ["workbench.view.explorer"] },                     // エクスプローラーを表示
+    { "before": ["leader", "a"], "commands": ["workbench.action.findInFiles"] },                // フォルダーを指定して検索
+    { "before": ["leader", "r"], "commands": ["editor.action.rename"] },                        // シンボルの名前変更
+    { "before": ["leader", "d"], "commands": [{ "command": "editor.action.peekDefinition" }] }, // 定義をここに表示
+
+    // easy motion
+    { "before": ["f"], "after": ["<Leader>", "<Leader>", "2", "s"] },
 
     // center aligned
     { "before": ["n"], "after": ["n", "z", "z"] },
@@ -91,12 +95,6 @@
     { "before": ["H"], "after": ["H", "z", "z"] },
     { "before": ["M"], "after": ["M", "z", "z"] },
     { "before": ["L"], "after": ["L", "z", "z"] },
-
-    // peek definition
-    { "before": ["leader", "d"], "commands": [{ "command": "editor.action.peekDefinition" }] },
-
-    // easy motion
-    { "before": ["f"], "after": ["<Leader>", "<Leader>", "2", "s"] },
 
     // undo / redo
     { "before": ["u"], "commands": [{ "command": "undo" }] },
