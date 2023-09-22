@@ -57,13 +57,9 @@ function! ExecExCommand(cmd)
   silent exec a:cmd
   return ''
 endfunction
-" 単語移動(in insert mode)
+" 単語移動
 inoremap <silent> <expr> <C-b> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
 inoremap <silent> <expr> <C-f> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
-
-" ctrl + dで削除
-inoremap <C-d> <Del>
-noremap <C-d> <Del>
 
 " 行頭、行末に移動して挿入モードに切り替え
 inoremap <C-e> <Esc>$a
@@ -71,18 +67,36 @@ inoremap <C-a> <Esc>^i
 noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^i
 
-" 行頭・行末・文字検索
-noremap <Leader>h  ^
-noremap <Leader>l  $
-nnoremap <Leader>/  *
+" 行頭/行末/文字検索
+noremap <Leader>h ^
+noremap <Leader>l $
+nnoremap <Leader>/ *
 
-" 画面半分先へ。画面半分戻るは[C-u]
-noremap <C-m> <C-d>
-" カーソル固定で下にスクロール。上にスクロールは[C-y]
-noremap <C-i> <C-e>
+" カーソル固定で 下にスクロール/上にスクロール
+noremap <C-d> <C-e>
+noremap <C-u> <C-y>
+
+" タブ移動
+noremap gh gT
+noremap gl gt
+
+" 雑に上下移動
+noremap J 10j
+noremap K 10k
+
+" センター寄せ
+noremap n nzz
+nnoremap N Nzz
+nnoremap H Hzz
+nnoremap M Mzz
+nnoremap L Lzz
+nnoremap [ %zz
 
 " カーソル位置から行末までをycdv
 nnoremap yl y$
 nnoremap cl c$
 nnoremap dl d$
 nnoremap vl v$
+
+" <ctrl + d>で削除
+inoremap <C-d> <Del>
