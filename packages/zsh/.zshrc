@@ -75,11 +75,18 @@ function gsc() {
 }
 
 # -------------------------
-# Homebrew系
+# Homebrew
 # -------------------------
 alias bl='brew list'
 alias bdoc='brew doctor'
 alias bconf='brew --config'
+
+# -------------------------
+# Volta
+# -------------------------
+alias vol='volta'
+alias volls='volta list'
+alias vollsa='volta list all'
 
 # -------------------------
 # その他
@@ -90,6 +97,10 @@ alias vi='vim'
 alias cat="bat"
 alias ls="exa"
 
+# .zshrc 閲覧/編集
+alias readz='view -M ~/.zshrc'
+alias writez='vim ~/.zshrc'
+
 # cd系
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -98,7 +109,6 @@ alias ....='cd ../../..'
 # ファイル閲覧系
 alias les='less -N'
 alias vw='view -M'
-alias showz='view -M ~/.zshrc'
 
 # tree系
 alias tr='tree'
