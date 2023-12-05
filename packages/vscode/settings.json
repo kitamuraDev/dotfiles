@@ -34,6 +34,9 @@
   // Prettier
   //----------------------------------------------------------
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.formatOnSave": true
+  },
   "[markdown]": {
     "editor.formatOnSave": true
   },
