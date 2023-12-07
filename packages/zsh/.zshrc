@@ -52,8 +52,8 @@ alias del_other_main='git branch | grep -v main | xargs git branch -D'
 # 「ブランチ」「ステータス」「差分」の確認
 alias gbsd='git branch && git status && git diff'
 
-# ステージング前のファイルの状態を取り消す(clear unstaging)
-alias cus='git restore .'
+# ステージング前のファイルをクリアする(clear unstaging)
+alias cus='git restore . && git clean -df'
 
 # ローカルとリモートの比較
 alias gdmain='git fetch origin main && git diff main origin/main'
