@@ -96,14 +96,5 @@
   // Deno
   //----------------------------------------------------------
   "deno.enable": true,
-  "deno.lint": true,
-
-  //----------------------------------------------------------
-  // Java
-  //----------------------------------------------------------
-  "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-18.0.2.1.jdk/Contents/Home",
-  "[java]": {
-    "editor.defaultFormatter": "redhat.java"
-  },
-  "java.saveActions.organizeImports": true
+  "deno.lint": true
 }
