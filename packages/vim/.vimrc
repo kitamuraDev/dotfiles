@@ -64,28 +64,28 @@ inoremap <silent> <expr> <C-f> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal 
 " 行頭、行末に移動して挿入モードに切り替え
 inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^i
-noremap <C-e> <Esc>$a
-noremap <C-a> <Esc>^i
+nnoremap <C-e> <Esc>$a
+nnoremap <C-a> <Esc>^i
 
 " 行頭/行末/文字検索
-noremap <Leader>h ^
-noremap <Leader>l $
+nnoremap <Leader>h ^
+nnoremap <Leader>l $
 nnoremap <Leader>/ *
 
 " カーソル固定で 下にスクロール/上にスクロール
-noremap <C-d> <C-e>
-noremap <C-u> <C-y>
+nnoremap <C-d> <C-e>
+nnoremap <C-u> <C-y>
 
 " タブ移動
-noremap gh gT
-noremap gl gt
+nnoremap gh gT
+nnoremap gl gt
 
 " 雑に上下移動
-noremap J 10j
-noremap K 10k
+nnoremap J 10j
+nnoremap K 10k
 
 " センター寄せ
-noremap n nzz
+nnoremap n nzz
 nnoremap N Nzz
 nnoremap H Hzz
 nnoremap M Mzz
@@ -97,6 +97,9 @@ nnoremap yl y$
 nnoremap cl c$
 nnoremap dl d$
 nnoremap vl v$
+
+" 行選択
+nnoremap vn V
 
 " <ctrl + d>で削除
 inoremap <C-d> <Del>

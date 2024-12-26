@@ -2,17 +2,17 @@
   //----------------------------------------------------------
   // vscode basic settings
   //----------------------------------------------------------
-  "workbench.colorTheme": "GitHub Dark Default", // vscodeのテーマ
-  "workbench.iconTheme": "vscode-icons", // iconテーマ
-  "editor.guides.bracketPairs": true, // ブラケット強調
-  "terminal.integrated.splitCwd": "initial", // ターミナルの分割
-  "editor.tabSize": 2, // タブサイズ
-  "editor.minimap.enabled": false, // ミニマップを削除
-  "files.trimTrailingWhitespace": true, // 行末の余分なスペースを削除
-  "editor.renderWhitespace": "all", // spaceとtabを適切に表示
-  "editor.lineNumbers": "relative", // エディタの表示番号を現在位置の相対番号
+  "workbench.colorTheme": "GitHub Dark Default",     // vscodeのテーマ
+  "workbench.iconTheme": "vscode-icons",             // iconテーマ
+  "editor.guides.bracketPairs": true,                // ブラケット強調
+  "terminal.integrated.splitCwd": "initial",         // ターミナルの分割
+  "editor.tabSize": 2,                               // タブサイズ
+  "editor.minimap.enabled": false,                   // ミニマップを削除
+  "files.trimTrailingWhitespace": true,              // 行末の余分なスペースを削除
+  "editor.renderWhitespace": "all",                  // spaceとtabを適切に表示
+  "editor.lineNumbers": "relative",                  // エディタの表示番号を現在位置の相対番号
   "gitlens.views.repositories.files.layout": "list", // gitlens
-  "emmet.variables": { "lang": "ja" }, // emmetの言語設定を日本語に
+  "emmet.variables": { "lang": "ja" },               // emmetの言語設定を日本語に
   // ファイルの除外設定(表示する/しない)以下はデフォルト
   "files.exclude": {
     "**/.classpath": true,
@@ -40,19 +40,10 @@
   "[markdown]": {
     "editor.formatOnSave": true
   },
-  "[graphql]": {
-    "editor.formatOnSave": true
-  },
   "[javascript]": {
     "editor.formatOnSave": true
   },
-  "[javascriptreact]": {
-    "editor.formatOnSave": true
-  },
   "[typescript]": {
-    "editor.formatOnSave": true
-  },
-  "[typescriptreact]": {
     "editor.formatOnSave": true
   },
   "[json]": {
