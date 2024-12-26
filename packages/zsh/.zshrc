@@ -95,7 +95,7 @@ alias q='exit'
 alias v='vim'
 alias vi='vim'
 alias cat="bat"
-alias ls="exa"
+alias ls="eza"
 
 # .zshrc 閲覧/編集
 alias readz='view -M ~/.zshrc'
@@ -114,7 +114,7 @@ alias vw='view -M'
 alias tr='tree'
 alias trdp='tree -Dp'
 
-# exa(ls as exa): a(全表示) / l(一列にして表示。権限や所有者などの詳細情報も表示)
+# exa(ls as eza): a(全表示) / l(一列にして表示。権限や所有者などの詳細情報も表示)
 alias ll='ls -al'
 
 # -------------------------
@@ -158,3 +158,9 @@ fd() {
                   -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
 }
+
+# -------------------------
+# OpenJDK
+# -------------------------
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
