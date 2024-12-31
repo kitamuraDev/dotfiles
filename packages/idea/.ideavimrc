@@ -1,0 +1,21 @@
+" -------------------------
+" 基本設定
+" -------------------------
+source ~/.vimrc
+
+" -------------------------
+" プラグイン
+" -------------------------
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+Plug 'machakann/vim-highlightedyank' " highlightedyank
+Plug 'easymotion/vim-easymotion'     " easymotion
+
+" -------------------------
+" JetBrainsアクションとのキーマッピング
+" -------------------------
+" 名前変更
+nmap <Leader>r <Action>(RenameElement)
+" マウスホバーした時の情報を出す
+nmap <Leader>k <Action>(ShowHoverInfo)
+" デバッグ
+nmap <Leader>d <Action>(Debug)

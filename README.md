@@ -29,17 +29,20 @@ curl -o - https://raw.githubusercontent.com/kitamuraDev/dotfiles/main/delete-sym
 
 <br />
 
-## ファイル構成
+## 構成
 
 ```
 .
+├── .gitignore
 ├── Brewfile
-├── README.md
 ├── delete-symlink
 ├── extensions
 ├── install
+├── README.md
+├── vscode_setup
 └── packages
     ├── git
+    ├── idea
     ├── starship
     ├── vim
     ├── vscode

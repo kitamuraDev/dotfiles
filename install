@@ -28,7 +28,7 @@ if [ ! -d ~/.config ]; then
 fi
 
 # stow
-stow -v -d ~/dotfiles/packages -t ~ git starship vim zsh
+stow -v -d ~/dotfiles/packages -t ~ git idea starship vim zsh
 
 # .zshrcを読み込む
 source ~/.zshrc
