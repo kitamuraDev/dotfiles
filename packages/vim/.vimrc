@@ -78,8 +78,8 @@ nnoremap <C-d> <C-e>
 nnoremap <C-u> <C-y>
 
 " タブ移動
-nnoremap gh gT
-nnoremap gl gt
+nnoremap th gT
+nnoremap tl gt
 
 " 雑に上下移動
 nnoremap J 10j
