@@ -1,11 +1,12 @@
 angular.ng-template
 astro-build.astro-vscode
+biomejs.biome
 bradlc.vscode-tailwindcss
 cweijan.vscode-database-client2
-dbaeumer.vscode-eslint
 denoland.vscode-deno
 eamodio.gitlens
-esbenp.prettier-vscode
+github.copilot
+github.copilot-chat
 github.github-vscode-theme
 hediet.vscode-drawio
 humao.rest-client
