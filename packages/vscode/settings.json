@@ -27,8 +27,8 @@
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "biomejs.biome",
   "editor.codeActionsOnSave": {
-    "quickfix.biome": true,              // lint
-    "source.organizeImports.biome": true // importの自動整理
+    "quickfix.biome": "explicit",              // lint
+    "source.organizeImports.biome": "explicit" // importの自動整理
   },
   "[html]": {
     "editor.formatOnSave": true
