@@ -88,6 +88,14 @@ alias vol='volta'
 alias volls='volta list'
 alias vollsa='volta list all'
 
+function voluse() {
+  volta list all
+  echo
+  echo -n "切り替えたいバージョン もしくは インストールしたいバージョンを入力 (例: 18.16.0): " && read nodever;
+
+  volta install node@${nodever}
+}
+
 # -------------------------
 # その他
 # -------------------------
