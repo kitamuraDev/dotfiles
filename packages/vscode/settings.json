@@ -84,10 +84,4 @@
   //----------------------------------------------------------
   "javascript.updateImportsOnFileMove.enabled": "always", // importの自動更新
   "typescript.tsdk": "./node_modules/typescript/lib",     // TypeScriptのバージョンをプロジェクト側に強制
-
-  //----------------------------------------------------------
-  // Deno
-  //----------------------------------------------------------
-  "deno.enable": true,
-  "deno.lint": true
 }
