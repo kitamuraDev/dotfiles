@@ -22,7 +22,7 @@ setopt auto_cd
 alias g='git'
 alias gitls='alias | grep git'
 alias gmj='gitmoji'
-alias gc='gitmoji -c'
+alias gco='gitmoji -c'
 alias gcd='cd $(ghq root)/$(ghq list | peco)'
 
 # Basic commands
@@ -30,14 +30,12 @@ alias ga='git add'
 alias gaa='git add -A'
 alias gb='git branch'
 alias gs='git status'
-alias gss='git status -s'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gsh='git stash'
 alias gshls='git stash list'
 alias gf='git fetch'
 alias gm='git merge'
-alias gst='git switch'
 alias gpush='git push origin HEAD'
 alias gpull='git pull --rebase origin main'
 
@@ -60,13 +58,6 @@ alias gdmain='git fetch origin main && git diff main origin/main'
 
 # ローカルの作業ブランチをmainブランチにマージ
 alias tomain='git switch main && git merge -'
-
-# ステージングを取り消す
-function restore() {
-  git status
-  echo "Please enter the file name to be removed from the stage" && read file;
-  git restore --staged ${file}
-}
 
 # 新規ブランチを作成してチェックアウト
 function gsc() {
@@ -132,7 +123,7 @@ alias ll='ls -al'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # ローカルに存在するbranchを選択して切り替える
-fcb() {
+fst() {
   local branches branch
   branches=$(git branch -vv) &&
   branch=$(echo "$branches" | fzf +m) &&
