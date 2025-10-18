@@ -2,9 +2,7 @@
 # 基本設定
 # -------------------------
 export PATH="/usr/local/sbin:$PATH"
-# volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+eval "$(mise activate zsh)"
 # starship
 eval "$(starship init zsh)"
 # zshの補完を有効化
@@ -71,21 +69,6 @@ function gsc() {
 alias bl='brew list'
 alias bdoc='brew doctor'
 alias bconf='brew --config'
-
-# -------------------------
-# Volta
-# -------------------------
-alias vol='volta'
-alias volls='volta list'
-alias vollsa='volta list all'
-
-function voluse() {
-  volta list all
-  echo
-  echo -n "切り替えたいバージョン もしくは インストールしたいバージョンを入力 (例: 18.16.0): " && read nodever;
-
-  volta install node@${nodever}
-}
 
 # -------------------------
 # その他
@@ -162,4 +145,3 @@ fd() {
 # OpenJDK
 # -------------------------
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-
