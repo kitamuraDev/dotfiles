@@ -42,11 +42,21 @@ curl -o - https://raw.githubusercontent.com/kitamuraDev/dotfiles/main/delete-sym
 ├── vscode_setup
 └── packages
     ├── git
+    │   └── .gitconfig
     ├── idea
+    │   └── .ideavimrc
+    ├── mise
+    │   └── .config
+    │       └── mise
+    │           └── config.toml
     ├── starship
+    │   └── .config
+    │       └── starship.toml
     ├── vim
+    │   └── .vimrc
     ├── vscode
     │   ├── keybindings.json
     │   └── settings.json
     └── zsh
+        └── .zshrc
 ```
