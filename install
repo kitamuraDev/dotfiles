@@ -28,7 +28,11 @@ if [ ! -d ~/.config ]; then
 fi
 
 # stow
-stow -v -d ~/dotfiles/packages -t ~ git idea starship vim zsh
+stow -v -d ~/dotfiles/packages -t ~ git idea mise starship vim zsh
+
+# mise
+echo "run mise install ..."
+mise install
 
 # .zshrcを読み込む
 source ~/.zshrc
