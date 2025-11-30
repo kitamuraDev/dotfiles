@@ -2,4 +2,5 @@
 bun = "latest"
 deno = "latest"
 node = "latest"
+"npm:@google/gemini-cli" = "latest"
 "npm:gitmoji-cli" = "latest"
