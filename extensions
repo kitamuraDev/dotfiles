@@ -2,6 +2,7 @@ angular.ng-template
 astro-build.astro-vscode
 biomejs.biome
 bradlc.vscode-tailwindcss
+cweijan.dbclient-jdbc
 cweijan.vscode-database-client2
 denoland.vscode-deno
 eamodio.gitlens
