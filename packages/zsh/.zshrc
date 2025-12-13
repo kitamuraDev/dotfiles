@@ -2,6 +2,7 @@
 # 基本設定
 # -------------------------
 export PATH="/usr/local/sbin:$PATH"
+source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
 eval "$(mise activate zsh)"
 # starship
 eval "$(starship init zsh)"

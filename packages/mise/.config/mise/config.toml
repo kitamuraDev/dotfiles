@@ -2,5 +2,6 @@
 bun = "latest"
 deno = "latest"
 node = "latest"
+"npm:@aikidosec/safe-chain" = "latest"
 "npm:@google/gemini-cli" = "latest"
 "npm:gitmoji-cli" = "latest"
