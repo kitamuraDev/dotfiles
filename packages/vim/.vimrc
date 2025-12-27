@@ -65,17 +65,11 @@ inoremap <silent> <expr> <C-f> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal 
 " 行頭、行末に移動して挿入モードに切り替え
 inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^i
-nnoremap <C-e> <Esc>$a
-nnoremap <C-a> <Esc>^i
 
-" 行頭/行末/文字検索
+" 行頭/行末/単語検索
 nnoremap <Leader>h ^
 nnoremap <Leader>l $
 nnoremap <Leader>/ *
-
-" カーソル固定で 下にスクロール/上にスクロール
-nnoremap <C-d> <C-e>
-nnoremap <C-u> <C-y>
 
 " タブ移動
 nnoremap th gT

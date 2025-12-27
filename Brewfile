@@ -19,6 +19,7 @@ brew "tree"
 brew "vim"
 brew "wget"
 brew "zsh"
+brew "zoxide"
 
 # cask
 cask_args appdir: "/Applications"

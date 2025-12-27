@@ -2,25 +2,21 @@
 # 基本設定
 # -------------------------
 export PATH="/usr/local/sbin:$PATH"
-source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
 eval "$(mise activate zsh)"
-# starship
 eval "$(starship init zsh)"
-# zshの補完を有効化
-autoload -Uz compinit && compinit
-# 補完候補を一覧表示する
-setopt auto_list
-# tabで順に補完候補を切り替える
-setopt auto_menu
-# パス直打ちでディレクトリ移動
-setopt auto_cd
+eval "$(zoxide init zsh --cmd cd)"
+source ~/.safe-chain/scripts/init-posix.sh
+
+autoload -Uz compinit && compinit # zshの補完を有効化
+setopt auto_list # 補完候補を一覧表示する
+setopt auto_menu # tabで順に補完候補を切り替える
+setopt auto_cd # パス直打ちでディレクトリ移動
 
 # -------------------------
 # git
 # -------------------------
 alias g='git'
 alias gitls='alias | grep git'
-alias gmj='gitmoji'
 alias gco='gitmoji -c'
 alias gcd='cd $(ghq root)/$(ghq list | peco)'
 
@@ -45,9 +41,6 @@ alias ghis='git reflog --date=local -n 10'
 
 # mainブランチ以外を削除
 alias del_other_main='git branch | grep -v main | xargs git branch -D'
-
-# 「ブランチ」「ステータス」「差分」の確認
-alias gbsd='git branch && git status && git diff'
 
 # ステージング前のファイルをクリアする(clear unstaging)
 alias cus='git restore . && git clean -df'
@@ -78,11 +71,12 @@ alias q='exit'
 alias v='vim'
 alias vi='vim'
 alias cat="bat"
-alias ls="eza"
+alias ls="eza --git"
+alias ll='eza -aahl --git'
 
 # .zshrc 閲覧/編集
-alias readz='view -M ~/.zshrc'
-alias writez='vim ~/.zshrc'
+alias rz='view -M ~/.zshrc'
+alias wz='vim ~/.zshrc'
 
 # cd系
 alias ..='cd ..'
@@ -96,9 +90,6 @@ alias vw='view -M'
 # tree系
 alias tr='tree'
 alias trdp='tree -Dp'
-
-# exa(ls as eza): a(全表示) / l(一列にして表示。権限や所有者などの詳細情報も表示)
-alias ll='ls -al'
 
 # -------------------------
 # fzf

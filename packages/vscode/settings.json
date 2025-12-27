@@ -5,7 +5,7 @@
   "workbench.colorTheme": "GitHub Dark Default",     // vscodeのテーマ
   "workbench.iconTheme": "vscode-icons",             // iconテーマ
   "editor.guides.bracketPairs": true,                // ブラケット強調
-  "terminal.integrated.splitCwd": "initial",         // ターミナルの分割
+  "editor.insertSpaces": true,                       // タブをスペースに変換
   "editor.tabSize": 2,                               // タブサイズ
   "editor.minimap.enabled": false,                   // ミニマップを削除
   "files.trimTrailingWhitespace": true,              // 行末の余分なスペースを削除
@@ -13,13 +13,6 @@
   "editor.lineNumbers": "relative",                  // エディタの表示番号を現在位置の相対番号
   "gitlens.views.repositories.files.layout": "list", // gitlens
   "emmet.variables": { "lang": "ja" },               // emmetの言語設定を日本語に
-  // ファイルの除外設定(表示する/しない)以下はデフォルト
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
 
   //----------------------------------------------------------
   // Biome
@@ -66,7 +59,7 @@
     { "before": ["leader", "e"], "commands": ["workbench.view.explorer"] },                     // エクスプローラーを表示
     { "before": ["leader", "a"], "commands": ["workbench.action.findInFiles"] },                // フォルダーを指定して検索
     { "before": ["leader", "r"], "commands": ["editor.action.rename"] },                        // シンボルの名前変更
-    { "before": ["leader", "d"], "commands": [{ "command": "editor.action.peekDefinition" }] }, // 定義をここに表示
+    { "before": ["leader", "d"], "commands": ["editor.action.peekDefinition"] },                // 定義をここに表示
 
     // easy motion
     { "before": ["f"], "after": ["<Leader>", "<Leader>", "2", "s"] },
@@ -83,5 +76,5 @@
   // JavaScript / TypeScript
   //----------------------------------------------------------
   "javascript.updateImportsOnFileMove.enabled": "always", // importの自動更新
-  "typescript.tsdk": "./node_modules/typescript/lib",     // TypeScriptのバージョンをプロジェクト側に強制
+  "typescript.tsdk": "./node_modules/typescript/lib"      // TypeScriptのバージョンをプロジェクト側に強制
 }
