@@ -28,7 +28,7 @@ if [ ! -d ~/.config ]; then
 fi
 
 # stow
-stow -v -d ~/dotfiles/packages -t ~ git idea mise starship vim zsh
+stow -v -d ~/dotfiles/packages -t ~ git idea mise starship vim nvim zsh
 
 # mise
 echo "run mise install ..."

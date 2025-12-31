@@ -3,3 +3,5 @@
   name = kitamuraDev
 [init]
   defaultBranch = main
+[core]
+  editor = nvim

@@ -26,37 +26,3 @@
 ```
 curl -o - https://raw.githubusercontent.com/kitamuraDev/dotfiles/main/delete-symlink | sh
 ```
-
-<br />
-
-## 構成
-
-```
-.
-├── .gitignore
-├── Brewfile
-├── delete-symlink
-├── extensions
-├── install
-├── README.md
-├── vscode_setup
-└── packages
-    ├── git
-    │   └── .gitconfig
-    ├── idea
-    │   └── .ideavimrc
-    ├── mise
-    │   └── .config
-    │       └── mise
-    │           └── config.toml
-    ├── starship
-    │   └── .config
-    │       └── starship.toml
-    ├── vim
-    │   └── .vimrc
-    ├── vscode
-    │   ├── keybindings.json
-    │   └── settings.json
-    └── zsh
-        └── .zshrc
-```

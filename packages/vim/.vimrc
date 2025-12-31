@@ -42,7 +42,7 @@ set hlsearch   " 検索結果をハイライト表示
 set wrapscan   " 検索がファイル末尾まで進んだら、ファイル先頭から再び検索
 
 " -------------------------
-" key-mapping
+" キーマップ
 " -------------------------
 " leader設定
 let mapleader = "\<space>"
@@ -50,42 +50,20 @@ let mapleader = "\<space>"
 " ESC連打でハイライト解除
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
-" change normal mode
+" インサートモードから抜ける
 inoremap <silent> jj <Esc>
 
-" Exコマンドを実装する関数を定義
-function! ExecExCommand(cmd)
-  silent exec a:cmd
-  return ''
-endfunction
-" 単語移動
-inoremap <silent> <expr> <C-b> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal b')<CR>" : "<C-r>=ExecExCommand('normal b')<CR>"
-inoremap <silent> <expr> <C-f> pumvisible() ? "<C-e><C-r>=ExecExCommand('normal w')<CR>" : "<C-r>=ExecExCommand('normal w')<CR>"
-
-" 行頭、行末に移動して挿入モードに切り替え
-inoremap <C-e> <Esc>$a
-inoremap <C-a> <Esc>^i
-
-" 行頭/行末/単語検索
-nnoremap <Leader>h ^
-nnoremap <Leader>l $
-nnoremap <Leader>/ *
-
-" タブ移動
-nnoremap th gT
-nnoremap tl gt
+" 行選択
+nnoremap vn V
 
 " 雑に上下移動
 nnoremap J 10j
 nnoremap K 10k
 
-" センター寄せ
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap H Hzz
-nnoremap M Mzz
-nnoremap L Lzz
-nnoremap [ %zz
+" 行頭/行末/単語検索
+nnoremap <Leader>h ^
+nnoremap <Leader>l $
+nnoremap <Leader>/ *
 
 " カーソル位置から行末までをycdv
 nnoremap yl y$
@@ -93,8 +71,13 @@ nnoremap cl c$
 nnoremap dl d$
 nnoremap vl v$
 
-" 行選択
-nnoremap vn V
-
-" <ctrl + d>で削除
+" Emacs風キーバインド
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-a> <C-o>^
+inoremap <C-e> <End>
 inoremap <C-d> <Del>
+inoremap <C-k> <C-o>d$
+inoremap <C-h> <BS>

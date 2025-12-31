@@ -1,5 +1,6 @@
 angular.ng-template
 astro-build.astro-vscode
+asvetliakov.vscode-neovim
 biomejs.biome
 bradlc.vscode-tailwindcss
 cweijan.dbclient-jdbc
@@ -13,4 +14,3 @@ hediet.vscode-drawio
 humao.rest-client
 mhutchie.git-graph
 vscode-icons-team.vscode-icons
-vscodevim.vim

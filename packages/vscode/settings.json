@@ -5,6 +5,7 @@
   "workbench.colorTheme": "GitHub Dark Default",     // vscodeのテーマ
   "workbench.iconTheme": "vscode-icons",             // iconテーマ
   "editor.guides.bracketPairs": true,                // ブラケット強調
+  "editor.cursorBlinking": "phase",                  // カーソル点滅のスタイル
   "editor.insertSpaces": true,                       // タブをスペースに変換
   "editor.tabSize": 2,                               // タブサイズ
   "editor.minimap.enabled": false,                   // ミニマップを削除
@@ -40,37 +41,19 @@
   },
 
   //----------------------------------------------------------
-  // vscode vim
+  // vscode neovim
   //----------------------------------------------------------
-  "vim.vimrc.enable": true, // vimrcを適用
-  "vim.vimrc.path": "/Users/masato_kitamura/.vimrc", // vimrcのパス
-  "vim.hlsearch": true,
-  "vim.easymotion": true,
-  "vim.easymotionKeys": "sdfghjkl",
-  "vim.useCtrlKeys": true,
-  "vim.useSystemClipboard": true,
-  "vim.ignorecase": true,
-  "vim.incsearch": true,
-  "vim.leader": "<space>", // .vimrcのmapleaderはvscode側では認識されないため、こちらでも設定
-  "vim.normalModeKeyBindingsNonRecursive": [
-    { "before": ["leader", "p"], "commands": ["workbench.action.showCommands"] },               // コマンド表示
-    { "before": ["leader", "q"], "commands": ["workbench.action.quickOpen"] },                  // クイックオープン
-    { "before": ["leader", "f"], "commands": ["workbench.action.showAllEditors"] },             // 現在開いているファイルを検索
-    { "before": ["leader", "e"], "commands": ["workbench.view.explorer"] },                     // エクスプローラーを表示
-    { "before": ["leader", "a"], "commands": ["workbench.action.findInFiles"] },                // フォルダーを指定して検索
-    { "before": ["leader", "r"], "commands": ["editor.action.rename"] },                        // シンボルの名前変更
-    { "before": ["leader", "d"], "commands": ["editor.action.peekDefinition"] },                // 定義をここに表示
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.darwin": "/Users/masato_kitamura/.config/nvim/init.lua",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
 
-    // easy motion
-    { "before": ["f"], "after": ["<Leader>", "<Leader>", "2", "s"] },
-
-    // undo / redo
-    { "before": ["u"], "commands": [{ "command": "undo" }] },
-    { "before": ["r"], "commands": [{ "command": "redo" }] }
-  ],
-  "vim.insertModeKeyBindingsNonRecursive": [
-    { "before": [";", ";"], "commands": ["editor.action.triggerSuggest"] } // サジェスト起動
-  ],
+  // インサートモードでのキーマップはVScodeでは反応しないため以下で定義（ただし、<CTRL>+?系のキーマップは反応するためnvim側で定義してる）
+  "vscode-neovim.compositeKeys": {
+    "jj": { "command": "vscode-neovim.escape" },        // インサートモードから抜ける
+    ";;": { "command": "editor.action.triggerSuggest" } // サジェスト起動
+  },
 
   //----------------------------------------------------------
   // JavaScript / TypeScript
