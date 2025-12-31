@@ -3,7 +3,6 @@
 # -------------------------
 export PATH="/usr/local/sbin:$PATH"
 eval "$(mise activate zsh)"
-eval "$(starship init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 source ~/.safe-chain/scripts/init-posix.sh
 

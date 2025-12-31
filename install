@@ -22,13 +22,13 @@ cd `dirname $0`
 echo "run brew bundle ..."
 brew bundle -v --file=~/dotfiles/Brewfile
 
-# starship の config ファイルをを作成する（starship.toml は ~/.config 直下に置く必要があるため）
+# 各種パッケージを配置するための .config ファイルを作成する（miseやnvim は ~/.config 直下に置く必要がある）
 if [ ! -d ~/.config ]; then
   mkdir ~/.config
 fi
 
 # stow
-stow -v -d ~/dotfiles/packages -t ~ git idea mise starship vim nvim zsh
+stow -v -d ~/dotfiles/packages -t ~ git idea mise vim nvim zsh
 
 # mise
 echo "run mise install ..."
