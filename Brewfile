@@ -20,8 +20,9 @@ brew "stow"
 brew "tree"
 brew "vim"
 brew "wget"
-brew "zsh"
+brew "yazi"
 brew "zoxide"
+brew "zsh"
 
 # cask
 cask_args appdir: "/Applications"
