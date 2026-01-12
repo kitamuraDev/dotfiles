@@ -69,9 +69,9 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["leader", "p"], "commands": ["workbench.action.showCommands"] },   // コマンドパレット
     { "before": ["leader", "q"], "commands": ["workbench.action.quickOpen"] },      // クイックオープン
-    { "before": ["leader", "f"], "commands": ["workbench.action.showAllEditors"] }, // 現在開いているファイルを検索
     { "before": ["leader", "e"], "commands": ["workbench.view.explorer"] },         // エクスプローラーにフォーカスを移動
-    { "before": ["leader", "a"], "commands": ["workbench.action.findInFiles"] },    // 全検索
+    { "before": ["leader", "f"], "commands": ["find-it-faster.findFiles"] },        // ファイル検索
+    { "before": ["leader", "a"], "commands": ["find-it-faster.findWithinFiles"] },  // ファイル内テキスト検索
     { "before": ["leader", "r"], "commands": ["editor.action.rename"] },            // リネーム
     { "before": ["leader", "d"], "commands": ["editor.action.peekDefinition"] },    // 定義を表示
     { "before": ["leader", "z"], "commands": ["workbench.action.toggleZenMode"] },  // 禅モード切替
@@ -83,6 +83,12 @@
   "vim.insertModeKeyBindingsNonRecursive": [
     { "before": [";", ";"], "commands": ["editor.action.triggerSuggest"] }          // サジェスト起動
   ],
+
+  //----------------------------------------------------------
+  // FindItFaster
+  //----------------------------------------------------------
+  "find-it-faster.general.showMaximizedTerminal": true,
+  "find-it-faster.general.useWorkspaceSearchExcludes": true,
 
   //----------------------------------------------------------
   // JavaScript / TypeScript
