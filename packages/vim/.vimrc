@@ -13,14 +13,14 @@ set clipboard+=unnamed " yankした内容をクリップボードに入れる
 " -------------------------
 " 表示設定
 " -------------------------
-set number         " 行番号
-set relativenumber " 相対行番号
-set cursorline     " 現在の行を強調表示
-set expandtab      " Tab文字を半角スペース
-set shiftwidth=2   " インデント幅
-set softtabstop=2  " タブキー押下時に挿入される文字幅
-set showmatch      " 対応する括弧を強調表示
-syntax on          " シンタックスハイライト
+set number             " 行番号
+set relativenumber     " 相対行番号
+set cursorline         " 現在の行を強調表示
+set expandtab          " Tab文字を半角スペース
+set shiftwidth=2       " インデント幅
+set softtabstop=2      " タブキー押下時に挿入される文字幅
+set showmatch          " 対応する括弧を強調表示
+syntax on              " シンタックスハイライト
 
 " インサートモード時は縦棒カーソル
 if has('vim_starting')
@@ -35,11 +35,11 @@ endif
 " -------------------------
 " 検索
 " -------------------------
-set incsearch  " インクリメンタル検索 (検索ワードの最初の文字を入力した時点で検索が開始)
-set ignorecase " 検索するときに大文字小文字を区別しない
-set smartcase  " 小文字で検索すると大文字と小文字を無視して検索
-set hlsearch   " 検索結果をハイライト表示
-set wrapscan   " 検索がファイル末尾まで進んだら、ファイル先頭から再び検索
+set incsearch          " インクリメンタル検索 (検索ワードの最初の文字を入力した時点で検索が開始)
+set ignorecase         " 検索するときに大文字小文字を区別しない
+set smartcase          " 小文字で検索すると大文字と小文字を無視して検索
+set hlsearch           " 検索結果をハイライト表示
+set wrapscan           " 検索がファイル末尾まで進んだら、ファイル先頭から再び検索
 
 " -------------------------
 " キーマップ
@@ -56,6 +56,10 @@ inoremap <silent> jj <Esc>
 " 行選択
 nnoremap vn V
 
+" タブ移動
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+
 " 雑に上下移動
 nnoremap J 10j
 nnoremap K 10k
@@ -71,9 +75,15 @@ nnoremap cl c$
 nnoremap dl d$
 nnoremap vl v$
 
+" センター寄せ
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap H Hzz
+nnoremap M Mzz
+nnoremap L Lzz
+nnoremap [ %zz
+
 " Emacs風キーバインド
-inoremap <C-p> <Up>
-inoremap <C-n> <Down>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-a> <C-o>^

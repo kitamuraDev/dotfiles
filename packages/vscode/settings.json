@@ -2,18 +2,18 @@
   //----------------------------------------------------------
   // vscode basic settings
   //----------------------------------------------------------
-  "workbench.colorTheme": "GitHub Dark Default",     // vscodeのテーマ
-  "workbench.iconTheme": "vscode-icons",             // iconテーマ
-  "editor.guides.bracketPairs": true,                // ブラケット強調
-  "editor.cursorBlinking": "phase",                  // カーソル点滅のスタイル
-  "editor.insertSpaces": true,                       // タブをスペースに変換
-  "editor.tabSize": 2,                               // タブサイズ
-  "editor.minimap.enabled": false,                   // ミニマップを削除
-  "files.trimTrailingWhitespace": true,              // 行末の余分なスペースを削除
-  "editor.renderWhitespace": "all",                  // spaceとtabを適切に表示
-  "editor.lineNumbers": "relative",                  // エディタの表示番号を現在位置の相対番号
-  "gitlens.views.repositories.files.layout": "list", // gitlens
-  "emmet.variables": { "lang": "ja" },               // emmetの言語設定を日本語に
+  "workbench.colorTheme": "GitHub Dark Default",                                    // vscodeのテーマ
+  "workbench.iconTheme": "vscode-icons",                                            // iconテーマ
+  "editor.guides.bracketPairs": true,                                               // ブラケット強調
+  "editor.cursorBlinking": "phase",                                                 // カーソル点滅のスタイル
+  "editor.insertSpaces": true,                                                      // タブをスペースに変換
+  "editor.tabSize": 2,                                                              // タブサイズ
+  "editor.minimap.enabled": false,                                                  // ミニマップを削除
+  "files.trimTrailingWhitespace": true,                                             // 行末の余分なスペースを削除
+  "editor.renderWhitespace": "all",                                                 // spaceとtabを適切に表示
+  "editor.lineNumbers": "relative",                                                 // エディタの表示番号を現在位置の相対番号
+  "gitlens.views.repositories.files.layout": "list",                                // gitlens
+  "emmet.variables": { "lang": "ja" },                                              // emmetの言語設定を日本語に
 
   //----------------------------------------------------------
   // Biome
@@ -21,8 +21,8 @@
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "biomejs.biome",
   "editor.codeActionsOnSave": {
-    "quickfix.biome": "explicit",              // lint
-    "source.organizeImports.biome": "explicit" // importの自動整理
+    "quickfix.biome": "explicit",                                                   // lint
+    "source.organizeImports.biome": "explicit"                                      // importの自動整理
   },
   "[html]": {
     "editor.formatOnSave": true
@@ -41,23 +41,52 @@
   },
 
   //----------------------------------------------------------
-  // vscode neovim
+  // vscode vim
   //----------------------------------------------------------
-  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.darwin": "/Users/masato_kitamura/.config/nvim/init.lua",
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
+  "vim.vimrc.enable": true,                                                         // .vimrcを適用
+  "vim.vimrc.path": "/Users/masato_kitamura/.vimrc",                                // .vimrcのパス
 
-  // インサートモードでのキーマップはVScodeでは反応しないため以下で定義（ただし、<CTRL>+?系のキーマップは反応するためnvim側で定義してる）
-  "vscode-neovim.compositeKeys": {
-    "jj": { "command": "vscode-neovim.escape" },        // インサートモードから抜ける
-    ";;": { "command": "editor.action.triggerSuggest" } // サジェスト起動
-  },
+  // 基本
+  "vim.leader": "<space>",                                                          // mapleader（.vimrcのmapleader設定がvscode側で認識されないため）
+  "vim.useCtrlKeys": true,                                                          // Ctrlキーを使用
+  "vim.useSystemClipboard": true,                                                   // システムクリップボードを使用
+  "vim.highlightedyank.enable": true,                                               // yank時にハイライト
+  "vim.highlightedyank.duration": 300,                                              // yank時のハイライト時間(ms)
+
+  // 検索
+  "vim.incsearch": true,                                                            // インクリメンタル検索 (検索ワードの最初の文字を入力した時点で検索が開始)
+  "vim.ignorecase": true,                                                           // 検索するときに大文字小文字を区別しない
+  "vim.smartcase": true,                                                            // 小文字で検索すると大文字と小文字を無視して検索
+  "vim.hlsearch": true,                                                             // 検索結果をハイライト
+  "vim.wrapscan": true,                                                             // 検索がファイル末尾まで進んだら、ファイル先頭から再び検索
+
+  // プラグイン
+  "vim.surround": true,                                                             // surroundを有効化
+  "vim.easymotion": true,                                                           // easy motionを有効化
+  "vim.easymotionKeys": "sdfghjkl",                                                 // easy motionのキー設定
+
+  // キーマップ
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["leader", "p"], "commands": ["workbench.action.showCommands"] },   // コマンドパレット
+    { "before": ["leader", "q"], "commands": ["workbench.action.quickOpen"] },      // クイックオープン
+    { "before": ["leader", "f"], "commands": ["workbench.action.showAllEditors"] }, // 現在開いているファイルを検索
+    { "before": ["leader", "e"], "commands": ["workbench.view.explorer"] },         // エクスプローラーにフォーカスを移動
+    { "before": ["leader", "a"], "commands": ["workbench.action.findInFiles"] },    // 全検索
+    { "before": ["leader", "r"], "commands": ["editor.action.rename"] },            // リネーム
+    { "before": ["leader", "d"], "commands": ["editor.action.peekDefinition"] },    // 定義を表示
+    { "before": ["leader", "z"], "commands": ["workbench.action.toggleZenMode"] },  // 禅モード切替
+
+    { "before": ["u"], "commands": [{ "command": "undo" }] },                       // undo
+    { "before": ["r"], "commands": [{ "command": "redo" }] },                       // redo
+    { "before": ["f"], "after": ["<Leader>", "<Leader>", "2", "s"] },               // easy motion
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    { "before": [";", ";"], "commands": ["editor.action.triggerSuggest"] }          // サジェスト起動
+  ],
 
   //----------------------------------------------------------
   // JavaScript / TypeScript
   //----------------------------------------------------------
-  "javascript.updateImportsOnFileMove.enabled": "always", // importの自動更新
-  "typescript.tsdk": "./node_modules/typescript/lib"      // TypeScriptのバージョンをプロジェクト側に強制
+  "javascript.updateImportsOnFileMove.enabled": "always",                           // importの自動更新
+  "typescript.tsdk": "./node_modules/typescript/lib"                                // TypeScriptのバージョンをプロジェクト側に強制
 }

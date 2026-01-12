@@ -31,8 +31,6 @@ keymap.set('n', 'dl', 'd$')
 keymap.set('n', 'vl', 'v$')
 
 -- Emacs風キーバインド
-keymap.set('i', '<C-p>', '<Up>')        -- ↑
-keymap.set('i', '<C-n>', '<Down>')      -- ↓
 keymap.set('i', '<C-b>', '<Left>')      -- ←
 keymap.set('i', '<C-f>', '<Right>')     -- →
 keymap.set('i', '<C-a>', '<C-o>^')      -- 行頭へ

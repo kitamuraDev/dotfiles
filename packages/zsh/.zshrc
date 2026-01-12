@@ -67,15 +67,15 @@ alias bconf='brew --config'
 # その他
 # -------------------------
 alias q='exit'
-alias v='nvim'
-alias vi='nvim'
+alias v='vim'
+alias vi='vim'
 alias cat="bat"
 alias ls="eza --git"
 alias ll='eza -aahl --git'
 
 # .zshrc 閲覧/編集
 alias rz='view -M ~/.zshrc'
-alias wz='nvim ~/.zshrc'
+alias wz='vim ~/.zshrc'
 
 # cd系
 alias ..='cd ..'
