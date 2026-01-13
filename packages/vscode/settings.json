@@ -2,8 +2,8 @@
   //----------------------------------------------------------
   // vscode basic settings
   //----------------------------------------------------------
-  "workbench.colorTheme": "GitHub Dark Default",                                    // vscodeのテーマ
-  "workbench.iconTheme": "vscode-icons",                                            // iconテーマ
+  "workbench.colorTheme": "GitHub Dark Default",                                    // カラーテーマ
+  "workbench.iconTheme": "vscode-icons",                                            // アイコンテーマ
   "editor.guides.bracketPairs": true,                                               // ブラケット強調
   "editor.cursorBlinking": "phase",                                                 // カーソル点滅のスタイル
   "editor.insertSpaces": true,                                                      // タブをスペースに変換
