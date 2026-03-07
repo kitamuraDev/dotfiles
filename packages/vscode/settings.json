@@ -12,6 +12,7 @@
   "files.trimTrailingWhitespace": true,                                             // 行末の余分なスペースを削除
   "editor.renderWhitespace": "all",                                                 // spaceとtabを適切に表示
   "editor.lineNumbers": "relative",                                                 // エディタの表示番号を現在位置の相対番号
+  "explorer.compactFolders": false,                                                 // フォルダをコンパクト表示しない
   "gitlens.views.repositories.files.layout": "list",                                // gitlens
   "emmet.variables": { "lang": "ja" },                                              // emmetの言語設定を日本語に
 
