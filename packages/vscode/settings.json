@@ -22,7 +22,7 @@
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "biomejs.biome",
   "editor.codeActionsOnSave": {
-    "quickfix.biome": "explicit",                                                   // lint
+    "source.fixAll.biome": "explicit",                                              // lint
     "source.organizeImports.biome": "explicit"                                      // importの自動整理
   },
   "[html]": {
@@ -103,6 +103,6 @@
   //----------------------------------------------------------
   // JavaScript / TypeScript
   //----------------------------------------------------------
-  "javascript.updateImportsOnFileMove.enabled": "always",                           // importの自動更新
-  "typescript.tsdk": "./node_modules/typescript/lib"                                // TypeScriptのバージョンをプロジェクト側に強制
+  "js/ts.updateImportsOnFileMove.enabled": "always",                                // importの自動更新
+  "js/ts.tsdk.path": "./node_modules/typescript/lib"                                // TypeScriptのバージョンをプロジェクト側に強制
 }
