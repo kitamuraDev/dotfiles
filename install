@@ -22,13 +22,15 @@ cd `dirname $0`
 echo "run brew bundle ..."
 brew bundle -v --file=~/dotfiles/Brewfile
 
-# 各種パッケージを配置するための .config ファイルを作成する（miseやnvim は ~/.config 直下に置く必要がある）
-if [ ! -d ~/.config ]; then
-  mkdir ~/.config
-fi
+# 各種パッケージを配置するために .config, .warp ファイルを作成する（miseやnvim は ~/.config 直下に置く必要がある）
+for dir in ~/.config ~/.warp; do
+  if [ ! -d "$dir" ]; then
+    mkdir "$dir"
+  fi
+done
 
-# stow
-stow -v -d ~/dotfiles/packages -t ~ git idea mise vim nvim yazi zsh
+# stow（packages 直下の各パッケージを ~ 以下に展開する）
+stow -v -d ~/dotfiles/packages -t ~ git idea mise nvim vim warp yazi zsh
 
 # mise
 echo "run mise install ..."
