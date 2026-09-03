@@ -1,3 +1,4 @@
+42crunch.vscode-openapi
 angular.ng-template
 astro-build.astro-vscode
 biomejs.biome
@@ -6,12 +7,11 @@ cweijan.dbclient-jdbc
 cweijan.vscode-database-client2
 denoland.vscode-deno
 eamodio.gitlens
-github.copilot
-github.copilot-chat
 github.github-vscode-theme
 hediet.vscode-drawio
 humao.rest-client
 mhutchie.git-graph
-tomrijndorp.find-it-faster
+redhat.vscode-yaml
+rust-lang.rust-analyzer
 vscode-icons-team.vscode-icons
 vscodevim.vim

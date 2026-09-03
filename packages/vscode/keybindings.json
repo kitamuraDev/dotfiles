@@ -1,1 +1,37 @@
-[]
+[
+  //----------------------------------------------------------
+  // フォーカスをエディタに移動する（検索ビューからエディタにフォーカス移動するときに使用する）
+  //----------------------------------------------------------
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "cmd+1",
+    "command": "-workbench.action.focusFirstEditorGroup"
+  },
+
+  //----------------------------------------------------------
+  // 検索結果のフォーカス移動
+  //----------------------------------------------------------
+  {
+    "key": "ctrl+j",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "f4",
+    "command": "-search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "shift+f4",
+    "command": "-search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  }
+]
