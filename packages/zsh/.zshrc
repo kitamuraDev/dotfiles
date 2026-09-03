@@ -2,6 +2,8 @@
 # 基本設定
 # -------------------------
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
 eval "$(mise activate zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 source ~/.safe-chain/scripts/init-posix.sh
@@ -54,6 +56,51 @@ alias tomain='git switch main && git merge -'
 function gsc() {
   echo "Please enter the new branch" && read branch;
   git switch -c ${branch}
+}
+
+# git stash
+function gshf() {
+  local action selected stash_ref message
+
+  # Gitリポジトリ内で実行しているか確認
+  if ! git rev-parse --is-inside-work-tree &> /dev/null; then
+    print -u2 "gshf: not a Git repository"
+    return 1
+  fi
+
+  # 実行するstash操作を選択
+  action=$(printf '%s\n' save apply pop show drop diff | fzf --prompt='stash action> ') || return
+  [[ -z "$action" ]] && return 0
+
+  # 新しいstashを保存
+  if [[ "$action" == save ]]; then
+    read -r "message?stash message: " || return
+    git stash push -u -m "$message"
+    return
+  fi
+
+  # 操作対象のstashを選択
+  selected=$(git stash list | fzf --prompt='stash> ') || return
+  [[ -z "$selected" ]] && return 0
+  stash_ref=${selected%%:*}
+
+  # 選択した操作を実行
+  case "$action" in
+    # stashを適用（stashは残す）
+    apply) git stash apply "$stash_ref" ;;
+    # stashを適用して削除
+    pop) git stash pop "$stash_ref" ;;
+    # stashの差分を表示
+    show) git stash show --patch "$stash_ref" ;;
+    # stashと現在の作業ツリーを比較
+    diff) git diff "$stash_ref" ;;
+    # 確認後にstashを削除
+    drop)
+      read -q "confirm?Drop $stash_ref? [y/N] " || { print; return 0; }
+      print
+      git stash drop "$stash_ref"
+      ;;
+  esac
 }
 
 # -------------------------
@@ -143,8 +190,3 @@ function ya() {
   fi
   rm -f -- "$tmp"
 }
-
-# -------------------------
-# OpenJDK
-# -------------------------
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
